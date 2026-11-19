@@ -404,8 +404,72 @@ input, select, textarea {
 
 .mobile-nav-toggle {
   display: none;
-  padding: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: var(--radius-xs);
   color: var(--color-brand-primary);
+  cursor: pointer;
+  z-index: 1310;
+  position: relative;
+  transition: background-color var(--transition-clean), border-color var(--transition-clean), color var(--transition-clean);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-toggle:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-border-medium);
+}
+
+.mobile-nav-toggle.active {
+  background-color: var(--color-brand-primary-soft);
+  color: var(--color-brand-accent);
+  border-color: var(--color-brand-accent);
+}
+
+.nav-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.nav-toggle-icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s ease;
+}
+
+.nav-toggle-icon .icon-hamburger {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.nav-toggle-icon .icon-close {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+  pointer-events: none;
+}
+
+.mobile-nav-toggle.active .nav-toggle-icon .icon-hamburger {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+  pointer-events: none;
+}
+
+.mobile-nav-toggle.active .nav-toggle-icon .icon-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  pointer-events: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -1733,6 +1797,95 @@ input, select, textarea {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.75rem;
   color: #8C988F;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Navigation Drawer & Scrim Backdrop
+   -------------------------------------------------------------------------- */
+.mobile-nav-drawer,
+#mobileNavDrawer {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 300px;
+  max-width: 86vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-bg-surface);
+  box-shadow: -4px 0 28px rgba(13, 38, 25, 0.2);
+  z-index: 1250;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: right 0.28s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mobile-nav-drawer.active,
+#mobileNavDrawer.active {
+  right: 0 !important;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.mobile-nav-scrim,
+#navBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(13, 38, 25, 0.52);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1200;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  pointer-events: none;
+}
+
+.mobile-nav-scrim.active,
+#navBackdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Prevent background scrolling when mobile menu is open */
+body.mobile-nav-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+body.mobile-nav-open .site-header {
+  z-index: 1300 !important;
+}
+
+/* Scroll Margins for anchor links */
+#daily-menu-section,
+#our-craft-section,
+#location-hours-section {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.mobile-nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  padding: 8px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: color var(--transition-clean), padding-left var(--transition-clean);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active,
+.mobile-nav-link.active {
+  color: var(--color-brand-primary);
+  padding-left: 6px;
 }
 
 /* Toast Notification */

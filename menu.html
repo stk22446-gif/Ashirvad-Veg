@@ -78,15 +78,18 @@
           <span class="cart-counter-pill cart-badge" style="display: none;">0</span>
         </button>
 
-        <button type="button" class="mobile-nav-toggle" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button type="button" class="mobile-nav-toggle" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span class="nav-toggle-icon">
+            <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Navigation Slide Drawer -->
-  <aside class="cart-drawer-panel" id="mobileNavDrawer" style="left: auto; right: -320px; width: 300px;">
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
     <div class="cart-drawer-head">
       <div>
         <div class="brand-title-text" style="color: #FFFFFF; font-size: 1.35rem;">Ashirvad Veg</div>
@@ -106,7 +109,7 @@
       </div>
     </div>
   </aside>
-  <div class="cart-drawer-overlay" id="navBackdrop"></div>
+  <div class="mobile-nav-scrim" id="navBackdrop"></div>
 
   <!-- Menu Masthead -->
   <header class="menu-masthead">

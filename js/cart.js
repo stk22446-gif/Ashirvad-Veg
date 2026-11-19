@@ -119,6 +119,9 @@ class CartManager {
   }
 
   openDrawer() {
+    if (typeof window.closeMobileMenu === "function") {
+      window.closeMobileMenu();
+    }
     const drawer = document.getElementById("cartDrawer");
     const overlay = document.getElementById("cartOverlay");
     if (drawer && overlay) {
@@ -135,7 +138,10 @@ class CartManager {
     if (drawer && overlay) {
       drawer.classList.remove("active");
       overlay.classList.remove("active");
-      document.body.style.overflow = "";
+      const mobileNav = document.getElementById("mobileNavDrawer");
+      if (!mobileNav || !mobileNav.classList.contains("active")) {
+        document.body.style.overflow = "";
+      }
     }
   }
 

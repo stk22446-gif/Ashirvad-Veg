@@ -31,36 +31,113 @@ function initHeaderScroll() {
 }
 
 /**
- * Mobile Navigation Drawer Toggle
+ * Mobile Navigation Drawer Toggle & Icon Morphing
  */
 function initMobileNavigation() {
   const openBtn = document.getElementById("mobileMenuOpenBtn");
   const closeBtn = document.getElementById("closeNavDrawer");
   const navDrawer = document.getElementById("mobileNavDrawer");
   const scrim = document.getElementById("navBackdrop");
-  const navLinks = document.querySelectorAll(".mobile-nav-link");
+  const siteHeader = document.getElementById("siteHeader") || document.querySelector(".site-header");
 
   if (!openBtn || !navDrawer) return;
 
-  const openDrawer = () => {
+  const updateDrawerPosition = () => {
+    if (siteHeader) {
+      const rect = siteHeader.getBoundingClientRect();
+      const topOffset = Math.max(0, Math.round(rect.bottom));
+      navDrawer.style.top = `${topOffset}px`;
+      navDrawer.style.height = `calc(100dvh - ${topOffset}px)`;
+      if (scrim) {
+        scrim.style.top = `${topOffset}px`;
+      }
+    }
+  };
+
+  const openMenu = () => {
+    // Close order cart drawer if open
+    if (window.cartApp && typeof window.cartApp.closeDrawer === "function") {
+      window.cartApp.closeDrawer();
+    }
+
+    updateDrawerPosition();
+
     navDrawer.classList.add("active");
     if (scrim) scrim.classList.add("active");
-    document.body.style.overflow = "hidden";
+    openBtn.classList.add("active");
+    openBtn.setAttribute("aria-expanded", "true");
+    openBtn.setAttribute("aria-label", "Close Navigation Menu");
+    document.body.classList.add("mobile-nav-open");
   };
 
-  const closeDrawer = () => {
+  const closeMenu = () => {
     navDrawer.classList.remove("active");
     if (scrim) scrim.classList.remove("active");
-    document.body.style.overflow = "";
+    openBtn.classList.remove("active");
+    openBtn.setAttribute("aria-expanded", "false");
+    openBtn.setAttribute("aria-label", "Open Navigation Menu");
+    document.body.classList.remove("mobile-nav-open");
+
+    // Clean up dynamic coordinates after slide-out transition
+    setTimeout(() => {
+      if (!navDrawer.classList.contains("active")) {
+        navDrawer.style.top = "";
+        navDrawer.style.height = "";
+        if (scrim) scrim.style.top = "";
+      }
+    }, 320);
   };
 
-  openBtn.addEventListener("click", openDrawer);
-  if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
-  if (scrim) scrim.addEventListener("click", closeDrawer);
+  const toggleMenu = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (navDrawer.classList.contains("active")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
 
-  navLinks.forEach(link => {
-    link.addEventListener("click", closeDrawer);
+  // Toggle on hamburger button click / tap
+  openBtn.addEventListener("click", toggleMenu);
+
+  // Close on inner close button
+  if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeMenu();
+    });
+  }
+
+  // Close on scrim / backdrop click
+  if (scrim) {
+    scrim.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeMenu();
+    });
+  }
+
+  // Close when clicking any nav link inside drawer
+  const drawerLinks = navDrawer.querySelectorAll(".mobile-nav-link, a, button:not(#closeNavDrawer)");
+  drawerLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
   });
+
+  // Expose global closer for cart / escape handlers
+  window.closeMobileMenu = closeMenu;
+
+  // Auto-close on resize to desktop width
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 991 && navDrawer.classList.contains("active")) {
+      closeMenu();
+    } else if (navDrawer.classList.contains("active")) {
+      updateDrawerPosition();
+    }
+  }, { passive: true });
 }
 
 /**
@@ -246,13 +323,11 @@ function initMenuPage() {
 function initQuickModals() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (window.cartApp) window.cartApp.closeDrawer();
-      const navDrawer = document.getElementById("mobileNavDrawer");
-      if (navDrawer && navDrawer.classList.contains("active")) {
-        navDrawer.classList.remove("active");
-        const scrim = document.getElementById("navBackdrop");
-        if (scrim) scrim.classList.remove("active");
-        document.body.style.overflow = "";
+      if (typeof window.closeMobileMenu === "function") {
+        window.closeMobileMenu();
+      }
+      if (window.cartApp && typeof window.cartApp.closeDrawer === "function") {
+        window.cartApp.closeDrawer();
       }
     }
   });

@@ -203,6 +203,12 @@
     width: 100vw;
   }
 
+  .mobile-nav-drawer,
+  #mobileNavDrawer {
+    width: 290px;
+    max-width: 86vw;
+  }
+
   .mobile-sticky-order-bar {
     display: flex;
   }
