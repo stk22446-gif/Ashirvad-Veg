@@ -1,0 +1,314 @@
+/* ==========================================================================
+   ASHIRVAD VEG — DIGITAL MENU STYLESHEET (menu.css)
+   Real Restaurant Tabular & Editorial Menu Design
+   Consistent Brand Identity: Deep Forest Green, Warm Ivory, Terracotta & White
+   ========================================================================== */
+
+/* Menu Masthead Banner */
+.menu-masthead {
+  padding: 52px 0 36px;
+  background-color: var(--color-bg-base);
+  border-bottom: 1px solid var(--color-border-hairline);
+  text-align: center;
+}
+
+.menu-masthead-title {
+  font-family: var(--font-serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.menu-masthead-desc {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  max-width: 600px;
+  margin: 0 auto 16px;
+  line-height: 1.6;
+}
+
+.menu-masthead-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-brand-accent);
+  background-color: var(--color-brand-accent-soft);
+  border: 1px solid rgba(189, 83, 36, 0.25);
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+}
+
+/* Category Navigation (Clean architectural tabs, no neon pill chips) */
+.menu-nav-sticky {
+  position: sticky;
+  top: var(--header-height);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-border-hairline);
+  z-index: 900;
+  box-shadow: 0 1px 4px rgba(20, 56, 38, 0.04);
+}
+
+.menu-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.category-tabs-scroll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-tab-btn {
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 8px 14px;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-clean);
+  border: 1px solid transparent;
+}
+
+.menu-tab-btn:hover {
+  color: var(--color-brand-primary);
+  background-color: var(--color-bg-subtle);
+}
+
+.menu-tab-btn.active {
+  color: #FFFFFF;
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.menu-search-inline {
+  position: relative;
+  min-width: 220px;
+  max-width: 260px;
+  flex-shrink: 0;
+}
+
+.menu-search-inline input {
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  transition: all var(--transition-clean);
+}
+
+.menu-search-inline input:focus {
+  border-color: var(--color-brand-primary);
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.search-clear-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+  display: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+/* Category Section Layout */
+.menu-sections-wrapper {
+  padding: 48px 0 80px;
+  background-color: var(--color-bg-surface);
+}
+
+.menu-category-section {
+  margin-bottom: 56px;
+  scroll-margin-top: calc(var(--header-height) + 64px);
+}
+
+.menu-category-section:last-child {
+  margin-bottom: 0;
+}
+
+.menu-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-brand-primary);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.menu-section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  letter-spacing: -0.01em;
+}
+
+.menu-section-count {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* Menu Items List Layout (Restaurant style) */
+.menu-items-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 44px;
+}
+
+.menu-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: var(--radius-xs);
+  transition: border-color var(--transition-clean), box-shadow var(--transition-clean);
+}
+
+.menu-row-item:hover {
+  border-color: var(--color-border-medium);
+  box-shadow: var(--shadow-card);
+}
+
+.menu-row-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-hairline);
+  background-color: var(--color-bg-subtle);
+}
+
+.menu-row-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-clean);
+}
+
+.menu-row-item:hover .menu-row-thumb img {
+  transform: scale(1.05);
+}
+
+.menu-row-left {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.menu-row-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.menu-item-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  line-height: 1.25;
+}
+
+.menu-item-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.menu-item-tag.popular {
+  background-color: var(--color-brand-accent-soft);
+  color: var(--color-brand-accent);
+  border: 1px solid rgba(189, 83, 36, 0.25);
+}
+
+.menu-item-description {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.menu-row-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.menu-item-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  white-space: nowrap;
+}
+
+.btn-menu-add {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  background-color: var(--color-brand-primary-soft);
+  border: 1px solid rgba(20, 56, 38, 0.2);
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-clean);
+}
+
+.btn-menu-add:hover {
+  background-color: var(--color-brand-primary);
+  color: #FFFFFF;
+}
+
+/* Empty State */
+.menu-empty-filter {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border-hairline);
+  border-radius: var(--radius-xs);
+}
+
+.menu-empty-filter h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-brand-primary);
+  margin-bottom: 8px;
+}
+
+.menu-empty-filter p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}

@@ -1,0 +1,252 @@
+/* ==========================================================================
+   ASHIRVAD VEG — RESPONSIVE STYLESHEET (responsive.css)
+   Mobile & Tablet First Layout Adaptations
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Medium Tablets & Small Laptops (max-width: 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .main-nav-links {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-main-photo {
+    height: 380px;
+  }
+
+  .heritage-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .popular-dishes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .menu-items-grid,
+  .menu-items-table {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gallery-asymmetric-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tile-span-8,
+  .tile-span-4,
+  .tile-span-4-row2 {
+    grid-column: span 1;
+    height: 260px;
+  }
+
+  .location-practical-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Phones (max-width: 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 62px;
+    --topbar-height: 34px;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .top-utility-left .top-utility-sep,
+  .top-utility-left span:nth-child(3) {
+    display: none;
+  }
+
+  .top-utility-inner {
+    font-size: 0.72rem;
+  }
+
+  .brand-title-text {
+    font-size: 1.35rem;
+  }
+
+  .brand-caption-text {
+    font-size: 0.6rem;
+  }
+
+  .brand-crest {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-header-whatsapp {
+    display: none;
+  }
+
+  .hero-main-heading {
+    font-size: 2.25rem;
+  }
+
+  .hero-editorial-lead {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions-group .btn-primary-solid,
+  .hero-actions-group .btn-accent-whatsapp,
+  .hero-actions-group .btn-secondary-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-guarantees-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-main-photo {
+    height: 280px;
+  }
+
+  .section-headline {
+    font-size: 1.85rem;
+  }
+
+  .section-head-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .popular-dishes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-controls-flex,
+  .menu-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .menu-search-box,
+  .menu-search-inline {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .menu-item-row,
+  .menu-row-item {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+
+  .menu-item-thumb,
+  .menu-row-thumb {
+    width: 58px;
+    height: 58px;
+  }
+
+  .menu-item-name {
+    font-size: 0.92rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.95rem;
+  }
+
+  .gallery-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .tile-span-8,
+  .tile-span-4,
+  .tile-span-4-row2 {
+    height: 220px;
+  }
+
+  .map-embed-frame {
+    height: 280px;
+  }
+
+  .cart-drawer-panel {
+    width: 100vw;
+  }
+
+  .mobile-sticky-order-bar {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 60px; /* Offset for sticky mobile cart bar */
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-base-row {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Devices (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-main-heading {
+    font-size: 1.95rem;
+  }
+
+  .dish-card-media {
+    height: 170px;
+  }
+
+  .heritage-photos-composition {
+    grid-template-columns: 1fr;
+  }
+
+  .heritage-pillars {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .menu-item-thumb,
+  .menu-row-thumb {
+    width: 52px;
+    height: 52px;
+  }
+}

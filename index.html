@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashirvad Veg — Authentic South Indian Vegetarian Restaurant | Marathahalli, Bengaluru</title>
+  <meta name="description" content="Ashirvad Veg is an authentic pure vegetarian South Indian restaurant opposite Kala Mandir on Marathahalli Outer Ring Road, Bangalore. Serving stone-ground tiffins, crispy ghee dosas, degree filter coffee, and meals daily from 6:30 AM to 10:30 PM.">
+  <meta name="keywords" content="Ashirvad Veg, South Indian vegetarian restaurant Marathahalli, pure veg restaurant Bangalore, masala dosa Marathahalli, idli vada Bangalore, filter coffee Outer Ring Road">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Ashirvad Veg — Authentic South Indian Vegetarian Restaurant">
+  <meta property="og:description" content="Stone-ground breakfast tiffins, crispy ghee dosas, wholesome midday meals, and degree filter coffee. Opp. Kala Mandir, Marathahalli.">
+  <meta property="og:url" content="https://ashirvadveg.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1200&q=85">
+
+  <!-- Schema.org Restaurant Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Ashirvad Veg",
+    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No. 3/76, Ground Floor, Outer Ring Road, Opp. Kala Mandir",
+      "addressLocality": "Marathahalli, Bangalore",
+      "postalCode": "560037",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918971583654",
+    "servesCuisine": ["South Indian", "Pure Vegetarian", "Udupi", "North Indian"],
+    "priceRange": "₹20 - ₹120",
+    "openingHours": "Mo-Su 06:30-22:30"
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement / Live Status Bar -->
+  <aside class="top-utility-bar">
+    <div class="container top-utility-inner">
+      <div class="top-utility-left">
+        <span class="live-indicator">
+          <span class="live-pulse-dot"></span>
+          KITCHEN OPEN NOW • 6:30 AM – 10:30 PM
+        </span>
+        <span class="top-utility-sep">|</span>
+        <span>Opp. Kala Mandir, Outer Ring Road, Marathahalli</span>
+      </div>
+      <div class="top-utility-right">
+        <span>Takeaway & Inquiries: <a href="tel:8971583654" class="top-phone-link">8971583654</a></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-identity" aria-label="Ashirvad Veg Home">
+        <!-- Bespoke Brass & Forest Crest Emblem -->
+        <svg class="brand-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#143826" stroke="#BD5324" stroke-width="2.5"/>
+          <circle cx="50" cy="50" r="42" stroke="rgba(248, 211, 141, 0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+          <!-- Traditional Deepam / Kalasha Motif -->
+          <path d="M50 20C46 28 41 33 41 40C41 45.5 45 49 50 49C55 49 59 45.5 59 40C59 33 54 28 50 20Z" fill="#F8D38D"/>
+          <path d="M50 24C48 29 45 32 45 37C45 40 47.5 42 50 42C52.5 42 55 40 55 37C55 32 52 29 50 24Z" fill="#BD5324"/>
+          <!-- Base Katoris / Lotus Petals -->
+          <path d="M30 68C36 76 64 76 70 68C66 62 34 62 30 68Z" fill="#F8D38D"/>
+          <path d="M33 58C38 64 62 64 67 58C63 53 37 53 33 58Z" fill="#FAF0EB"/>
+          <circle cx="50" cy="74" r="3" fill="#BD5324"/>
+        </svg>
+
+        <div class="brand-meta">
+          <span class="brand-title-text">Ashirvad Veg</span>
+          <span class="brand-caption-text">Pure Vegetarian • Estd. Bengaluru</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-anchor active">Home</a>
+        <a href="#daily-menu-section" class="nav-anchor">Daily Menu</a>
+        <a href="#our-craft-section" class="nav-anchor">Our Craft</a>
+        <a href="#location-hours-section" class="nav-anchor">Location & Hours</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Direct WhatsApp Action -->
+        <button type="button" class="btn-header-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()" aria-label="Order on WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>WhatsApp Order</span>
+        </button>
+
+        <!-- Slide-out Cart Trigger Button -->
+        <button type="button" class="btn-cart-trigger cart-drawer-trigger" aria-label="View Order Bag">
+          <span>Order Bag</span>
+          <span class="cart-counter-pill cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-nav-toggle" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide Drawer -->
+  <aside class="cart-drawer-panel" id="mobileNavDrawer" style="left: auto; right: -320px; width: 300px;">
+    <div class="cart-drawer-head">
+      <div>
+        <div class="brand-title-text" style="color: #FFFFFF; font-size: 1.35rem;">Ashirvad Veg</div>
+        <div style="font-size: 0.68rem; color: #F8D38D; text-transform: uppercase; letter-spacing: 0.06em;">Marathahalli, Bengaluru</div>
+      </div>
+      <button type="button" class="cart-close-trigger" id="closeNavDrawer" aria-label="Close navigation">✕</button>
+    </div>
+    <div style="padding: 24px; display: flex; flex-direction: column; gap: 18px;">
+      <a href="index.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 700; color: var(--color-brand-primary);">Home</a>
+      <a href="#daily-menu-section" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Daily Kitchen Menu</a>
+      <a href="#our-craft-section" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Our Craft & Heritage</a>
+      <a href="#location-hours-section" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Location & Opening Hours</a>
+      <a href="menu.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Full Menu Page</a>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border-hairline); display: flex; flex-direction: column; gap: 12px;">
+        <a href="tel:8971583654" class="btn-secondary-outline" style="text-align: center;">Call: 8971583654</a>
+        <button type="button" class="btn-accent-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()" style="text-align: center;">Order on WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-drawer-overlay" id="navBackdrop"></div>
+
+  <!-- Main Content Structure -->
+  <main>
+
+    <!-- Editorial Hero Section (Asymmetric Architectural Composition) -->
+    <section class="editorial-hero">
+      <div class="container hero-editorial-grid">
+        <div class="hero-editorial-left">
+          <span class="brand-eyebrow">Bengaluru's Traditional Udupi Tiffin House</span>
+          
+          <h1 class="hero-main-heading">
+            Freshly ground batters. Crispy ghee dosas. <em>Wholesome Bengaluru cooking.</em>
+          </h1>
+
+          <p class="hero-editorial-lead">
+            Welcome to Ashirvad Veg. Located opposite Kala Mandir on Marathahalli Outer Ring Road, our kitchen opens at 6:30 AM every morning with hot steaming idlis, cast-iron roasted masala dosas, slow-dripped degree filter coffee, and afternoon plantain-leaf thalis. Honest South Indian food cooked with uncompromised integrity.
+          </p>
+
+          <!-- Meal Timings Anchor Bar -->
+          <div class="hero-meal-slots">
+            <span class="meal-slot-chip"><strong>Morning Tiffins</strong> • 6:30 AM – 11:30 AM</span>
+            <span class="meal-slot-chip"><strong>Midday Meals</strong> • 12:00 PM – 3:30 PM</span>
+            <span class="meal-slot-chip"><strong>Evening Chaats</strong> • 4:00 PM – 7:30 PM</span>
+            <span class="meal-slot-chip"><strong>Dinner Dosas</strong> • 7:00 PM – 10:30 PM</span>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="hero-actions-group">
+            <a href="#daily-menu-section" class="btn-primary-solid">
+              <span>Explore Daily Menu (77 Dishes)</span>
+              <span>&rarr;</span>
+            </a>
+            <button type="button" class="btn-accent-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>Order on WhatsApp</span>
+            </button>
+            <a href="#location-hours-section" class="btn-secondary-outline">Directions</a>
+          </div>
+
+          <!-- Operational Guarantees -->
+          <div class="hero-guarantees-bar">
+            <div class="guarantee-item">
+              <span class="guarantee-title">
+                <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                100% Pure Veg
+              </span>
+              <span class="guarantee-desc">Strictly satvik & eggless kitchen</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-title">Pure Dairy Ghee</span>
+              <span class="guarantee-desc">Roasted in pure ghee, no palm oil</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-title">Stone-Ground Daily</span>
+              <span class="guarantee-desc">Naturally fermented daily batters</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Composition (Right Column) -->
+        <div class="hero-visual-frame">
+          <div class="hero-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=85" alt="Crispy Ghee Masala Dosa with Sambar and Chutneys at Ashirvad Veg" class="hero-main-photo">
+            
+            <div class="hero-stamp-badge">
+              <div class="stamp-badge-title">Estd. Marathahalli</div>
+              <div class="stamp-badge-sub">6:30 AM – 10:30 PM</div>
+            </div>
+
+            <div class="hero-photo-caption">
+              <div>
+                <div class="caption-dish-name">Crispy Ghee Masala Dosa</div>
+                <div class="caption-dish-desc">Cast-iron roasted with spiced potato filling, coconut chutney & hot sambar</div>
+              </div>
+              <div class="caption-dish-price">₹75</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Restaurant Heritage & Kitchen Craft -->
+    <section class="section-heritage" id="our-craft-section">
+      <div class="container heritage-grid">
+        <div class="heritage-photos-composition">
+          <div class="heritage-photo-col">
+            <div class="heritage-img-card" style="height: 240px;">
+              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=85" alt="Steamed Idlis and Medu Vada on Banana Leaf" loading="lazy">
+            </div>
+            <div class="heritage-img-card" style="height: 180px;">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85" alt="Crispy Fried Mirchi Bajji" loading="lazy">
+            </div>
+          </div>
+          <div class="heritage-photo-col" style="padding-top: 24px;">
+            <div class="heritage-img-card" style="height: 190px;">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=85" alt="Traditional Brass Davara Filter Coffee" loading="lazy">
+            </div>
+            <div class="heritage-img-card" style="height: 230px;">
+              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=85" alt="Traditional South Indian Vegetarian Meal Thali" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="heritage-text-content">
+          <span class="brand-eyebrow">Culinary Discipline & Heritage</span>
+          <h2 class="section-headline">Wholesome food cooked with uncompromised integrity.</h2>
+          
+          <p class="heritage-p">
+            At Ashirvad Veg, our cooking is rooted in time-tested Udupi vegetarian traditions. Every day begins at 4:00 AM with stone-grinding soaked rice and urad dal for our breakfast batters, allowing them to rise through natural fermentation without artificial baking soda or shortcuts.
+          </p>
+          <p class="heritage-p">
+            Our Karnataka sambar is slow-simmered in large brass vessels with country drumsticks, shallots, and freshly ground coriander, cumin, and fenugreek. We grind our coconut chutney fresh four times throughout the day so that the chutney served at 7:00 PM is as vibrant as the morning batch.
+          </p>
+
+          <div class="heritage-pillars">
+            <div class="pillar-item">
+              <h3 class="pillar-heading">Stone-Ground Daily</h3>
+              <p class="pillar-body">Batters ground fresh every morning. Crisp on the edges, fluffy on the inside, naturally fermented.</p>
+            </div>
+            <div class="pillar-item">
+              <h3 class="pillar-heading">Fresh Chutneys 4x Daily</h3>
+              <p class="pillar-body">Freshly grated coastal coconuts and roasted lentils. Never refrigerated or carried over.</p>
+            </div>
+            <div class="pillar-item">
+              <h3 class="pillar-heading">Pure Dairy Desi Ghee</h3>
+              <p class="pillar-body">Generously roasted in genuine ghee. No adulterated shortening, vanaspati, or recycled oil.</p>
+            </div>
+            <div class="pillar-item">
+              <h3 class="pillar-heading">Brass Filter Coffee</h3>
+              <p class="pillar-body">80:20 plantation peaberry decoction dripped through brass filters and aerated with whole milk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: House Specialties / Popular Staples -->
+    <section class="section-popular-staples">
+      <div class="container">
+        <div class="section-head-split">
+          <div>
+            <span class="brand-eyebrow">Customer Favorites</span>
+            <h2 class="section-headline">Dishes loved by our Marathahalli regulars</h2>
+            <p class="section-subheadline">Authentic recipes made fresh to order throughout the morning, afternoon, and evening.</p>
+          </div>
+          <div>
+            <a href="#daily-menu-section" class="btn-secondary-outline">Browse All 77 Dishes &rarr;</a>
+          </div>
+        </div>
+
+        <div class="popular-dishes-grid">
+          <!-- Dish 1: Masala Dosa -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Dosa</span>
+              <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=85" alt="Crispy Masala Dosa at Ashirvad Veg" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">Crispy Masala Dosa</h3>
+                </div>
+                <span class="dish-card-price">₹75</span>
+              </div>
+              <p class="dish-card-desc">Crispy golden rice crêpe folded over seasoned potato mash, accompanied by hot Karnataka drumstick sambar and freshly ground coconut chutney.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Served with Sambar & 2 Chutneys</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('masala-dosa', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 2: Idli Vada Combo -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Tiffins</span>
+              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=85" alt="Steamed Idli and Medu Vada Combo" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">Idli Vada Combo</h3>
+                </div>
+                <span class="dish-card-price">₹65</span>
+              </div>
+              <p class="dish-card-desc">One steamed fluffy rice idli paired with one crispy, peppercorn-spiked medu vada. Served piping hot with lentil sambar and fresh chutney.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Morning & Evening Tiffin</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('idli-vada-combo', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 3: Special Filter Coffee -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Beverage</span>
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=85" alt="Traditional Degree Filter Coffee" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">Special Filter Coffee</h3>
+                </div>
+                <span class="dish-card-price">₹25</span>
+              </div>
+              <p class="dish-card-desc">Slow-dripped chicory-peaberry decoction blended with frothy boiled whole milk in traditional brass davara tumblers. Robust, fragrant, and uplifting.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Served in Traditional Brass Davara</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('filter-coffee', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 4: South Indian Meals -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Meals & Rice</span>
+              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=85" alt="South Indian Afternoon Meals Thali" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">South Indian Meals</h3>
+                </div>
+                <span class="dish-card-price">₹110</span>
+              </div>
+              <p class="dish-card-desc">Wholesome afternoon thali with steamed sona masuri rice, drumstick sambar, pepper rasam, vegetable palya, fresh curd, roasted papad, pickle and sweet.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Available 12:00 PM – 3:30 PM</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('south-indian-meals', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 5: Chow Chow Bath -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Tiffins</span>
+              <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=85" alt="Bangalore Special Chow Chow Bath" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">Chow Chow Bath</h3>
+                </div>
+                <span class="dish-card-price">₹75</span>
+              </div>
+              <p class="dish-card-desc">The iconic Bangalore tiffin pairing of spicy vegetable Khara Bath with golden cashew Kesari Bath roasted in pure dairy ghee.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Savory Khara + Sweet Kesari</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('chow-chow-bath', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 6: Mirchi Bajji -->
+          <article class="dish-staple-card">
+            <div class="dish-card-media">
+              <span class="dish-card-cat-tag">Bajji Items</span>
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85" alt="Crispy Fried Mirchi Bajji" loading="lazy">
+            </div>
+            <div class="dish-card-body">
+              <div class="dish-card-head-row">
+                <div class="dish-title-group">
+                  <span class="veg-badge"><span class="veg-badge-dot"></span></span>
+                  <h3 class="dish-card-title">Mirchi Bajji (3 Pcs)</h3>
+                </div>
+                <span class="dish-card-price">₹45</span>
+              </div>
+              <p class="dish-card-desc">Plump green chillies enveloped in seasoned chickpea batter, fried crisp to order and served hot with freshly ground coconut chutney.</p>
+              <div class="dish-card-footer">
+                <span class="dish-serve-note">Evening Tea-Time Special</span>
+                <button type="button" class="btn-card-add" onclick="window.cartApp.addItem('mirchi-bajji', 1)">+ Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Daily Kitchen Menu (Interactive Direct Digital Menu) -->
+    <section class="section-live-menu" id="daily-menu-section">
+      <div class="container">
+        <div>
+          <span class="brand-eyebrow">Daily Kitchen Menu</span>
+          <h2 class="section-headline">Browse our complete kitchen offerings</h2>
+          <p class="section-subheadline">Every dish is prepared fresh daily with authentic ingredients, genuine dairy ghee, and accurate prices.</p>
+        </div>
+
+        <!-- Menu Explorer Sticky Filter Bar -->
+        <nav class="menu-explorer-controls" aria-label="Menu category filters">
+          <div class="menu-controls-flex">
+            <div class="menu-category-tabs-row" role="tablist">
+              <button type="button" class="menu-tab-btn active" data-category="all" role="tab">All Items (77)</button>
+              <button type="button" class="menu-tab-btn" data-category="hot-beverages" role="tab">Hot Beverages</button>
+              <button type="button" class="menu-tab-btn" data-category="sweet-items" role="tab">Sweet Items</button>
+              <button type="button" class="menu-tab-btn" data-category="tiffins" role="tab">Tiffins</button>
+              <button type="button" class="menu-tab-btn" data-category="meals-rice" role="tab">Meals & Rice</button>
+              <button type="button" class="menu-tab-btn" data-category="dosa" role="tab">Dosa</button>
+              <button type="button" class="menu-tab-btn" data-category="bajji-items" role="tab">Bajji Items</button>
+              <button type="button" class="menu-tab-btn" data-category="soup" role="tab">Soup</button>
+              <button type="button" class="menu-tab-btn" data-category="roti-items" role="tab">Roti Items</button>
+              <button type="button" class="menu-tab-btn" data-category="north-meals" role="tab">North Meals</button>
+              <button type="button" class="menu-tab-btn" data-category="chats" role="tab">Chats</button>
+              <button type="button" class="menu-tab-btn" data-category="extra" role="tab">Extra</button>
+            </div>
+
+            <div class="menu-search-box">
+              <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search dishes..." aria-label="Search food dishes">
+              <span class="menu-search-clear" id="clearSearchInputBtn" aria-label="Clear search">✕</span>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Dynamic Menu Content Container (Populated by app.js with all 77 items) -->
+        <div id="menuSectionsContainer">
+          <!-- Rendered dynamically by app.js initMenuPage() -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Editorial Photography Gallery (Varied Asymmetric Layout) -->
+    <section class="section-editorial-gallery">
+      <div class="container">
+        <div>
+          <span class="brand-eyebrow">Restaurant Atmosphere</span>
+          <h2 class="section-headline">A glimpse inside our kitchen & dining hall</h2>
+          <p class="section-subheadline">Authentic food photography of our morning preparation, live tawa counter, and welcoming Marathahalli hall.</p>
+        </div>
+
+        <div class="gallery-asymmetric-grid" style="margin-top: 32px;">
+          <!-- 1. Wide Feature: Live Cast-Iron Dosa Station -->
+          <div class="gallery-tile tile-span-8">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=85" alt="Live Cast-Iron Dosa Station roasting golden dosas in pure ghee" loading="lazy">
+            <div class="gallery-tile-caption">Live Cast-Iron Dosa Station • Pure Dairy Ghee Roast</div>
+          </div>
+
+          <!-- 2. Feature: Brass Filter Coffee Preparation -->
+          <div class="gallery-tile tile-span-4">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=85" alt="Degree Filter Coffee poured with frothy crema in brass davara" loading="lazy">
+            <div class="gallery-tile-caption">Degree Filter Coffee • Peaberry Decoction</div>
+          </div>
+
+          <!-- 3. Standard Feature: Morning Tiffin Spread -->
+          <div class="gallery-tile tile-span-4-row2">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=85" alt="Fluffy steamed idlis and medu vada on plantain leaf" loading="lazy">
+            <div class="gallery-tile-caption">Morning Breakfast Spread • Steamed Idlis & Vada</div>
+          </div>
+
+          <!-- 4. Standard Feature: Afternoon South Indian Meals -->
+          <div class="gallery-tile tile-span-4-row2">
+            <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=85" alt="Traditional South Indian afternoon vegetarian meal thali" loading="lazy">
+            <div class="gallery-tile-caption">Afternoon South Indian Meals • Served 12 PM - 3:30 PM</div>
+          </div>
+
+          <!-- 5. Standard Feature: Spacious Family Dining Hall -->
+          <div class="gallery-tile tile-span-4-row2">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=85" alt="Clean and comfortable vegetarian restaurant dining hall" loading="lazy">
+            <div class="gallery-tile-caption">Comfortable Family-Friendly Dining Hall</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Location, Operating Hours & Practical Information -->
+    <section class="section-location-practical" id="location-hours-section">
+      <div class="container location-practical-grid">
+        <div class="practical-info-col">
+          <span class="brand-eyebrow">Visit Ashirvad Veg</span>
+          <h2 class="section-headline">Easily accessible on Outer Ring Road</h2>
+          <p class="section-subheadline">
+            Conveniently situated on the ground floor opposite the landmark Kala Mandir in Marathahalli. Ample space for family dine-in and a dedicated counter for takeaway parcels.
+          </p>
+
+          <div class="practical-cards-list">
+            <!-- Address Card -->
+            <div class="practical-card">
+              <div class="practical-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="practical-card-content">
+                <span class="practical-card-label">Postal Address</span>
+                <span class="practical-card-val">No. 3/76, Ground Floor, Outer Ring Road, Opp. Kala Mandir, Marathahalli, Bangalore – 560037</span>
+                <span class="practical-card-note">Opposite Kala Mandir silk showroom on service road</span>
+              </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="practical-card">
+              <div class="practical-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="practical-card-content">
+                <span class="practical-card-label">Daily Service Timings</span>
+                <span class="practical-card-val">6:30 AM – 10:30 PM (All 7 Days of the Week)</span>
+                <span class="practical-card-note">Breakfast from 6:30 AM • Meals from 12:00 PM • Evening Snacks from 4:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Direct Phone Card -->
+            <div class="practical-card">
+              <div class="practical-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="practical-card-content">
+                <span class="practical-card-label">Direct Telephones</span>
+                <span class="practical-card-val">
+                  <a href="tel:8971583654">8971583654</a> / <a href="tel:9973240035">9973240035</a>
+                </span>
+                <span class="practical-card-note">Call for bulk breakfast orders, tiffin parcels, or table inquiries</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=Ashirvad+Veg+Marathahalli+Bangalore" target="_blank" rel="noopener" class="btn-primary-solid">Open Google Maps Directions &rarr;</a>
+            <button type="button" class="btn-accent-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()">Order via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Google Map -->
+        <div class="map-visual-wrapper">
+          <iframe 
+            class="map-embed-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.375503889073!2d77.69768657507604!3d12.951079387362364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13ad4c89d81d%3A0xe543c1626fdf21f4!2sKalamandir%2C%20Marathahalli!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ashirvad Veg Location Map opposite Kala Mandir Marathahalli">
+          </iframe>
+          <div class="map-footer-card">
+            <span class="map-footer-text">Outer Ring Road, Opp. Kala Mandir, Marathahalli</span>
+            <a href="https://maps.google.com/?q=Ashirvad+Veg+Marathahalli+Bangalore" target="_blank" rel="noopener" style="font-size: 0.78rem; font-weight: 700; color: var(--color-brand-accent);">Navigate &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide-out Order Cart Drawer (Full Order Breakdown & WhatsApp Generation) -->
+  <aside class="cart-drawer-panel" id="cartDrawer" role="dialog" aria-labelledby="cartDrawerTitle" aria-modal="true">
+    <div class="cart-drawer-head">
+      <div>
+        <h3 class="cart-head-title" id="cartDrawerTitle">Your Order Bag</h3>
+        <span class="cart-head-sub" id="cartTotalItemsCount">0 items selected</span>
+      </div>
+      <button type="button" class="cart-close-trigger" id="closeCartDrawer" aria-label="Close Order Bag">✕</button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="cart-empty-panel" id="cartEmptyState">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <h4 class="cart-empty-title">Your order bag is empty</h4>
+      <p class="cart-empty-msg">Browse through our daily kitchen menu and click '+ Add' next to any dish to begin your order.</p>
+    </div>
+
+    <!-- Populated Item Rows -->
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Injected by cart.js renderCartUI() -->
+    </div>
+
+    <!-- Drawer Checkout Footer -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <!-- Order Type Selector -->
+      <div class="cart-input-group">
+        <label for="orderTypeSelect" class="cart-input-label">Order Type</label>
+        <select id="orderTypeSelect" class="cart-select">
+          <option value="takeaway">Takeaway Parcel (Self Pickup)</option>
+          <option value="dinein">Dine-In Pre-order</option>
+          <option value="delivery">Home / Office Delivery</option>
+        </select>
+      </div>
+
+      <!-- Customer Details -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;" class="cart-input-group">
+        <div>
+          <label for="customerNameInput" class="cart-input-label">Your Name</label>
+          <input type="text" id="customerNameInput" class="cart-input" placeholder="e.g. Ramesh">
+        </div>
+        <div>
+          <label for="customerPhoneInput" class="cart-input-label">Phone Number</label>
+          <input type="tel" id="customerPhoneInput" class="cart-input" placeholder="e.g. 9876543210">
+        </div>
+      </div>
+
+      <!-- Delivery Address (Toggled by order type) -->
+      <div class="cart-input-group" id="deliveryAddressGroup" style="display: none;">
+        <label for="deliveryAddressInput" class="cart-input-label">Delivery Address in Marathahalli Area</label>
+        <textarea id="deliveryAddressInput" class="cart-input" rows="2" placeholder="Building, Flat, Street, Landmark..."></textarea>
+      </div>
+
+      <!-- Special Notes -->
+      <div class="cart-input-group">
+        <label for="specialNotesInput" class="cart-input-label">Kitchen Notes (Optional)</label>
+        <input type="text" id="specialNotesInput" class="cart-input" placeholder="e.g. Extra spicy sambar, Less sugar in coffee">
+      </div>
+
+      <!-- Subtotal Breakdown -->
+      <div class="cart-summary-line">
+        <span>Item Subtotal</span>
+        <span id="cartSubtotalPrice">₹0</span>
+      </div>
+      <div class="cart-summary-line" style="font-size: 0.78rem; color: var(--color-text-muted);">
+        <span>Packaging / Delivery</span>
+        <span>As applicable</span>
+      </div>
+
+      <!-- Total -->
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartDrawerTotalPrice" style="color: var(--color-brand-accent);">₹0</span>
+      </div>
+
+      <!-- Submit Order on WhatsApp Button -->
+      <button type="button" class="btn-accent-whatsapp" id="sendWhatsAppOrderBtn" style="width: 100%; margin-top: 14px; padding: 14px; font-size: 0.95rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Send Order on WhatsApp &rarr;</span>
+      </button>
+
+      <div style="text-align: center; margin-top: 10px;">
+        <button type="button" id="clearCartBtn" style="font-size: 0.75rem; color: var(--color-text-muted); text-decoration: underline;">Clear order bag</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+
+  <!-- Mobile Sticky Bottom Cart Bar -->
+  <div class="mobile-sticky-order-bar cart-drawer-trigger" id="mobileCartPill">
+    <div class="mobile-cart-left">
+      <span class="mobile-cart-sum" id="mobileCartTotal">₹0</span>
+      <span class="mobile-cart-items-count">0 items</span>
+    </div>
+    <div class="mobile-cart-action">
+      <span>View Order Bag &rarr;</span>
+    </div>
+  </div>
+
+  <!-- Site Footer (Architectural, Grounded Dark Forest Green) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-title">Ashirvad Veg</div>
+          <div class="footer-brand-sub">Authentic South Indian Vegetarian Kitchen</div>
+          <p class="footer-about-copy">
+            Serving traditional Udupi breakfast tiffins, crisp ghee dosas, degree filter coffee, and wholesome vegetarian meals to the Marathahalli community every single day.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="#daily-menu-section" class="footer-link">Daily Menu (77 Dishes)</a>
+            <a href="#our-craft-section" class="footer-link">Kitchen Craft & Story</a>
+            <a href="#location-hours-section" class="footer-link">Directions & Location</a>
+            <a href="menu.html" class="footer-link">Dedicated Menu Page</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Popular Kitchen Sections</h4>
+          <div class="footer-links-list">
+            <a href="menu.html?category=dosa" class="footer-link">Ghee Roast Dosas</a>
+            <a href="menu.html?category=tiffins" class="footer-link">Breakfast Idlis & Vada</a>
+            <a href="menu.html?category=meals-rice" class="footer-link">South Indian Meals</a>
+            <a href="menu.html?category=hot-beverages" class="footer-link">Degree Filter Coffee</a>
+            <a href="menu.html?category=chats" class="footer-link">Evening Chaats & Bajji</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Visit Our Restaurant</h4>
+          <div class="footer-contact-item">
+            <strong>Address</strong>
+            No. 3/76, Ground Floor, Outer Ring Road, Opp. Kala Mandir, Marathahalli, Bangalore – 560037
+          </div>
+          <div class="footer-contact-item">
+            <strong>Operating Hours</strong>
+            6:30 AM – 10:30 PM (All 7 Days)
+          </div>
+          <div class="footer-contact-item">
+            <strong>Telephone Inquiries</strong>
+            <a href="tel:8971583654" style="color: #F8D38D;">8971583654</a> / <a href="tel:9973240035" style="color: #F8D38D;">9973240035</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-base-row">
+        <div>&copy; 2026 Ashirvad Veg. 100% Pure Vegetarian Restaurant. All rights reserved.</div>
+        <div>No. 3/76, Outer Ring Road, Opp. Kala Mandir, Marathahalli, Bengaluru – 560037</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/image-data.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
