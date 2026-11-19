@@ -1,6 +1,7 @@
 /**
  * Ashirvad Veg - WhatsApp Order Dispatcher
  * Seamless, URL-encoded WhatsApp ordering directly to 918971583654
+ * Fully integrated with CartManager and centralized menu data.
  */
 
 const RESTAURANT_WHATSAPP_NUMBER = "918971583654";
@@ -13,12 +14,33 @@ class WhatsAppOrderSystem {
   }
 
   init() {
-    document.addEventListener("DOMContentLoaded", () => {
-      const checkoutBtn = document.getElementById("sendWhatsAppOrderBtn");
-      if (checkoutBtn) {
-        checkoutBtn.addEventListener("click", () => this.handleOrderSubmit());
-      }
-    });
+    const attachCheckout = () => {
+      document.addEventListener("click", (e) => {
+        if (e.target.closest("#sendWhatsAppOrderBtn")) {
+          e.preventDefault();
+          this.handleOrderSubmit();
+        }
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", attachCheckout);
+    } else {
+      attachCheckout();
+    }
+  }
+
+  formatOrderType(type) {
+    switch (type) {
+      case "takeaway":
+        return "🥡 Takeaway Parcel (Self Pickup)";
+      case "dinein":
+        return "🍽️ Dine-In Pre-order";
+      case "delivery":
+        return "🛵 Delivery (Nearby Marathahalli Area)";
+      default:
+        return "🥡 Takeaway Parcel";
+    }
   }
 
   generateOrderMessage(orderDetails) {
@@ -41,13 +63,13 @@ class WhatsAppOrderSystem {
 
     // Customer & Order Metadata
     msg += `*Order Type:* ${this.formatOrderType(orderType)}\n`;
-    if (customerName) {
+    if (customerName && customerName.trim().length > 0) {
       msg += `*Customer Name:* ${customerName.trim()}\n`;
     }
-    if (customerPhone) {
-      msg += `*Contact:* ${customerPhone.trim()}\n`;
+    if (customerPhone && customerPhone.trim().length > 0) {
+      msg += `*Contact Phone:* ${customerPhone.trim()}\n`;
     }
-    if (orderType === "delivery" && deliveryAddress) {
+    if (orderType === "delivery" && deliveryAddress && deliveryAddress.trim().length > 0) {
       msg += `*Delivery Address:* ${deliveryAddress.trim()}\n`;
     }
     msg += `--------------------------------------\n`;
@@ -55,16 +77,16 @@ class WhatsAppOrderSystem {
     // Itemized list
     msg += `*ITEMS ORDERED:*\n`;
     items.forEach((item, index) => {
-      const itemLineTotal = item.price * item.quantity;
+      const lineTotal = Number(item.price) * Number(item.quantity);
       msg += `${index + 1}. *${item.name}*\n`;
-      msg += `   Qty: ${item.quantity} × ₹${item.price} = *₹${itemLineTotal}*\n`;
+      msg += `   Qty: ${item.quantity} × ₹${item.price} = *₹${lineTotal}*\n`;
     });
 
     msg += `--------------------------------------\n`;
-    msg += `*Estimated Subtotal:* ₹${subtotal}\n`;
+    msg += `*Estimated Subtotal:* *₹${subtotal}*\n`;
 
     if (orderType === "takeaway" || orderType === "delivery") {
-      msg += `*Parcel/Packaging:* As per restaurant policy (to be confirmed)\n`;
+      msg += `*Packaging / Delivery:* As per restaurant policy (to be confirmed)\n`;
     }
 
     if (specialNotes && specialNotes.trim().length > 0) {
@@ -73,44 +95,34 @@ class WhatsAppOrderSystem {
 
     msg += `--------------------------------------\n`;
     msg += `_Please confirm order availability and share UPI payment QR / confirmation._\n`;
-    msg += `_Sent via Ashirvad Veg Web Order System._`;
+    msg += `_Sent via Ashirvad Veg Online Order System._`;
 
     return msg;
   }
 
-  formatOrderType(type) {
-    switch (type) {
-      case "takeaway":
-        return "🥡 Takeaway / Parcel";
-      case "dinein":
-        return "🍽️ Dine-in Pre-order";
-      case "delivery":
-        return "🛵 Delivery (Nearby Marathahalli)";
-      default:
-        return "Takeaway / Parcel";
-    }
-  }
-
   handleOrderSubmit() {
-    if (!window.cartApp || window.cartApp.items.length === 0) {
-      alert("Your order cart is empty! Please add some delicious items from the menu first.");
+    if (!window.cartApp || !Array.isArray(window.cartApp.items) || window.cartApp.items.length === 0) {
+      alert("Your order bag is empty! Please add some delicious items from the menu first.");
+      if (window.cartApp) {
+        window.cartApp.openDrawer();
+      }
       return;
     }
 
-    // Read form inputs from cart drawer (support both naming conventions)
-    const nameInput = document.getElementById("orderCustomerName") || document.getElementById("customerNameInput");
-    const phoneInput = document.getElementById("orderCustomerPhone") || document.getElementById("customerPhoneInput");
+    // Read form inputs from cart drawer
+    const nameInput = document.getElementById("customerNameInput") || document.getElementById("orderCustomerName");
+    const phoneInput = document.getElementById("customerPhoneInput") || document.getElementById("orderCustomerPhone");
     const orderTypeSelect = document.getElementById("orderTypeSelect");
-    const addressInput = document.getElementById("orderDeliveryAddress") || document.getElementById("deliveryAddressInput");
-    const notesInput = document.getElementById("orderSpecialNotes") || document.getElementById("specialNotesInput");
+    const addressInput = document.getElementById("deliveryAddressInput") || document.getElementById("orderDeliveryAddress");
+    const notesInput = document.getElementById("specialNotesInput") || document.getElementById("orderSpecialNotes");
 
-    const customerName = nameInput ? nameInput.value : "";
-    const customerPhone = phoneInput ? phoneInput.value : "";
+    const customerName = nameInput ? nameInput.value.trim() : "";
+    const customerPhone = phoneInput ? phoneInput.value.trim() : "";
     const orderType = orderTypeSelect ? orderTypeSelect.value : "takeaway";
-    const deliveryAddress = addressInput ? addressInput.value : "";
-    const specialNotes = notesInput ? notesInput.value : "";
+    const deliveryAddress = addressInput ? addressInput.value.trim() : "";
+    const specialNotes = notesInput ? notesInput.value.trim() : "";
 
-    if (orderType === "delivery" && (!deliveryAddress || deliveryAddress.trim().length < 5)) {
+    if (orderType === "delivery" && (!deliveryAddress || deliveryAddress.length < 5)) {
       alert("Please enter a valid delivery address in or around Marathahalli.");
       if (addressInput) addressInput.focus();
       return;
@@ -130,7 +142,7 @@ class WhatsAppOrderSystem {
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${RESTAURANT_WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
-    // Open WhatsApp in new tab
+    // Open WhatsApp
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     // Close drawer and show toast
@@ -148,4 +160,9 @@ class WhatsAppOrderSystem {
 }
 
 // Instantiate global WhatsApp order system
-window.whatsAppOrder = new WhatsAppOrderSystem();
+if (typeof window !== "undefined") {
+  window.whatsAppOrder = new WhatsAppOrderSystem();
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { WhatsAppOrderSystem, RESTAURANT_WHATSAPP_NUMBER, RESTAURANT_NAME, RESTAURANT_ADDRESS };
+}

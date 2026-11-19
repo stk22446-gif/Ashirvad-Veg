@@ -199,16 +199,27 @@
     height: 280px;
   }
 
-  .cart-drawer-panel {
+  .cart-drawer-panel,
+  .mobile-nav-panel {
     width: 100vw;
   }
 
-  .mobile-sticky-order-bar {
-    display: flex;
+  .mobile-sticky-order-bar,
+  #mobileCartPill {
+    display: none;
   }
 
-  body {
-    padding-bottom: 60px; /* Offset for sticky mobile cart bar */
+  .mobile-sticky-order-bar.visible,
+  #mobileCartPill.visible {
+    display: flex !important;
+  }
+
+  .cart-toast,
+  #cartToast {
+    bottom: 74px;
+    right: 16px;
+    left: 16px;
+    text-align: center;
   }
 
   .footer-top-grid {
