@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Order Cart — Ashirvad Veg | Direct Kitchen WhatsApp Order</title>
+  <meta name="description" content="Review your selected South Indian dishes, customize portions, and send your direct takeaway or dine-in order to Ashirvad Veg Marathahalli via WhatsApp.">
+  <meta name="keywords" content="Ashirvad Veg cart, South Indian food order Marathahalli, Bangalore vegetarian takeaway, WhatsApp food order Marathahalli">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your Order Cart — Ashirvad Veg, Marathahalli Bengaluru">
+  <meta property="og:description" content="Review your order items and dispatch directly to the kitchen on WhatsApp. Pure vegetarian South Indian tiffins, dosas, and meals.">
+  <meta property="og:url" content="https://ashirvadveg.com/cart.html">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="cart-page">
+
+  <!-- Top Announcement / Live Status Bar -->
+  <aside class="top-utility-bar">
+    <div class="container top-utility-inner">
+      <div class="top-utility-left">
+        <span class="live-indicator">
+          <span class="live-pulse-dot"></span>
+          KITCHEN OPEN NOW • 6:30 AM – 10:30 PM
+        </span>
+        <span class="top-utility-sep">|</span>
+        <span>Opp. Kala Mandir, Outer Ring Road, Marathahalli</span>
+      </div>
+      <div class="top-utility-right">
+        <span>Takeaway & Inquiries: <a href="tel:8971583654" class="top-phone-link">8971583654</a></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-identity" aria-label="Ashirvad Veg Home">
+        <!-- Bespoke Brass & Forest Crest Emblem -->
+        <svg class="brand-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#153D32" stroke="#B95B35" stroke-width="2.5"/>
+          <circle cx="50" cy="50" r="42" stroke="rgba(213, 183, 121, 0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+          <path d="M50 20C46 28 41 33 41 40C41 45.5 45 49 50 49C55 49 59 45.5 59 40C59 33 54 28 50 20Z" fill="#D5B779"/>
+          <path d="M50 24C48 29 45 32 45 37C45 40 47.5 42 50 42C52.5 42 55 40 55 37C55 32 52 29 50 24Z" fill="#B95B35"/>
+          <path d="M30 68C36 76 64 76 70 68C66 62 34 62 30 68Z" fill="#D5B779"/>
+          <path d="M33 58C38 64 62 64 67 58C63 53 37 53 33 58Z" fill="#F7F3E9"/>
+          <circle cx="50" cy="74" r="3" fill="#B95B35"/>
+        </svg>
+
+        <div class="brand-meta">
+          <span class="brand-title-text">Ashirvad Veg</span>
+          <span class="brand-caption-text">Pure Vegetarian • Estd. Bengaluru</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="menu.html" class="nav-anchor">Daily Menu</a>
+        <a href="about.html" class="nav-anchor">Our Craft</a>
+        <a href="contact.html" class="nav-anchor">Location &amp; Hours</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Single Cart Entry Point -->
+        <a href="cart.html" class="btn-header-cart active" id="headerCartBtn" aria-label="View Shopping Cart" aria-current="page">
+          <svg class="cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="headerCartBadge">0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-nav-toggle" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span class="nav-toggle-icon">
+            <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide Drawer -->
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="cart-drawer-head">
+      <div>
+        <div class="brand-title-text" style="color: #FFFFFF; font-size: 1.35rem;">Ashirvad Veg</div>
+        <div style="font-size: 0.68rem; color: #D5B779; text-transform: uppercase; letter-spacing: 0.06em;">Marathahalli, Bengaluru</div>
+      </div>
+      <button type="button" class="cart-close-trigger" id="closeNavDrawer" aria-label="Close navigation">✕</button>
+    </div>
+    <div style="padding: 24px; display: flex; flex-direction: column; gap: 18px;">
+      <a href="index.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Home</a>
+      <a href="menu.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Daily Kitchen Menu</a>
+      <a href="about.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Our Craft & Heritage</a>
+      <a href="contact.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Location & Opening Hours</a>
+      <a href="cart.html" class="mobile-nav-link active" style="font-size: 1rem; font-weight: 700; color: var(--color-brand-primary);">
+        Cart <span class="cart-badge" style="background: var(--color-brand-brass); color: var(--color-brand-primary-dark); font-size: 0.72rem; border-radius: 10px; padding: 1px 7px; margin-left: 6px;">0</span>
+      </a>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border-hairline); display: flex; flex-direction: column; gap: 12px;">
+        <a href="tel:8971583654" class="btn-secondary-outline" style="text-align: center;">Call: 8971583654</a>
+      </div>
+    </div>
+  </aside>
+  <div class="mobile-nav-scrim" id="navBackdrop"></div>
+
+  <!-- Cart Masthead -->
+  <header class="cart-masthead">
+    <div class="container">
+      <span class="cart-masthead-eyebrow">
+        <span>●</span> Direct Kitchen Order
+      </span>
+      <h1 class="cart-masthead-title">Order Cart & Checkout</h1>
+      <p class="cart-masthead-desc">
+        Review your selected South Indian dishes, customize quantities, and send your direct order to our Marathahalli kitchen on WhatsApp.
+      </p>
+
+      <!-- Two-Step Progress Stepper -->
+      <div class="cart-stepper-container" id="cartStepper">
+        <div class="cart-stepper">
+          <button type="button" class="stepper-node active" id="stepNode1" onclick="window.cartApp.goToCart()" aria-label="Step 1: Review Order">
+            <div class="stepper-badge">
+              <span class="stepper-num">1</span>
+              <svg class="stepper-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="stepper-label-wrap">
+              <span class="stepper-step-tag">Step 1</span>
+              <span class="stepper-label">Review Order</span>
+            </div>
+          </button>
+
+          <div class="stepper-connector" id="stepperConnector"></div>
+
+          <button type="button" class="stepper-node" id="stepNode2" onclick="window.cartApp.goToCheckout()" aria-label="Step 2: Customer Details">
+            <div class="stepper-badge">
+              <span class="stepper-num">2</span>
+              <svg class="stepper-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="stepper-label-wrap">
+              <span class="stepper-step-tag">Step 2</span>
+              <span class="stepper-label">Customer Details</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Cart Section -->
+  <main class="cart-page-section" id="cartMainContainer">
+    <div class="container">
+
+      <!-- Empty Cart State -->
+      <div class="cart-empty-card" id="cartPageEmptyState" style="display: none;">
+        <div class="cart-empty-icon-wrap">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <h2 class="cart-empty-title">Your Order Cart is Empty</h2>
+        <p class="cart-empty-copy">
+          You haven't added any dishes from our kitchen yet. Explore our 77 authentic South Indian delicacies, freshly made dosas, breakfast tiffins, and meals.
+        </p>
+        <a href="menu.html" class="btn-primary-solid" style="display: inline-flex; align-items: center; gap: 8px;">
+          <span>Browse Daily Kitchen Menu</span>
+          <span>&rarr;</span>
+        </a>
+
+        <div class="cart-empty-chips">
+          <span class="cart-empty-chip-label">Quick Suggestions:</span>
+          <a href="menu.html?category=dosa" class="cart-empty-chip-link">Ghee Dosas</a>
+          <a href="menu.html?category=tiffins" class="cart-empty-chip-link">Idli & Vada</a>
+          <a href="menu.html?category=meals-rice" class="cart-empty-chip-link">South Indian Meals</a>
+          <a href="menu.html?category=hot-beverages" class="cart-empty-chip-link">Degree Filter Coffee</a>
+          <a href="menu.html?category=chats" class="cart-empty-chip-link">Evening Chaats</a>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           STEP 1: REVIEW ORDER (NO CUSTOMER FORM FIELDS)
+           ======================================================== -->
+      <div class="cart-step-view" id="cartStepReview">
+        <div class="cart-page-layout" id="cartPageContent">
+
+          <!-- Left Column: Items Table -->
+          <div class="cart-page-card-wrap">
+            <div class="cart-page-card">
+              <!-- Table Header -->
+              <div class="cart-table-head">
+                <span>Dish / Item</span>
+                <span class="cart-table-head-col-price">Unit Price</span>
+                <span class="cart-table-head-col-qty">Quantity</span>
+                <span class="cart-table-head-col-total">Line Total</span>
+                <span class="cart-table-head-col-action">Action</span>
+              </div>
+
+              <!-- Dynamic Items Container -->
+              <div id="cartPageItemsContainer">
+                <!-- Rendered dynamically by CartManager.renderCartPageUI() -->
+              </div>
+
+              <!-- Table Footer Actions -->
+              <div class="cart-page-table-footer">
+                <a href="menu.html" class="btn-cart-continue">
+                  <span>&larr;</span>
+                  <span>Add More Dishes from Menu</span>
+                </a>
+                <button type="button" class="btn-cart-clear" id="cartPageClearBtn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                  <span>Clear Entire Cart</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="cart-pure-veg-badge-row">
+              <span class="veg-dot-text">● 100% Pure Vegetarian Kitchen</span>
+              <span>•</span>
+              <span>Prepared fresh upon kitchen confirmation</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Step 1 Order Summary Card -->
+          <aside class="cart-summary-card">
+            <div class="cart-summary-head">
+              <h2 class="cart-summary-title">Order Summary</h2>
+              <span class="cart-summary-count-badge" id="cartPageItemCount">0 items</span>
+            </div>
+
+            <div class="cart-summary-row">
+              <span>Dishes Subtotal</span>
+              <strong id="cartPageSubtotal">₹0</strong>
+            </div>
+
+            <div class="cart-summary-row" style="font-size: 0.8rem; color: var(--color-text-muted);">
+              <span>Parcel / Packaging</span>
+              <span>As applicable</span>
+            </div>
+
+            <div class="cart-summary-row total-row">
+              <span>Estimated Total</span>
+              <span class="cart-total-price" id="cartPageTotal">₹0</span>
+            </div>
+
+            <!-- Prominent Proceed to Checkout Button -->
+            <button type="button" class="btn-proceed-checkout" id="proceedToCheckoutBtn" onclick="window.cartApp.goToCheckout()" aria-label="Proceed to Customer Details & Checkout">
+              <span>Proceed to Checkout</span>
+              <span>&rarr;</span>
+            </button>
+
+            <div style="text-align: center; margin-top: 14px;">
+              <a href="menu.html" class="link-continue-shopping">&larr; Continue Shopping</a>
+            </div>
+
+            <!-- Guidance Badges -->
+            <div class="cart-trust-badges">
+              <div class="cart-trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Click Proceed to Checkout to enter your delivery address & contact details.</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           STEP 2: CHECKOUT – CUSTOMER & DELIVERY DETAILS
+           ======================================================== -->
+      <div class="cart-step-view" id="cartStepCheckout" style="display: none;">
+        <!-- Back to Review Cart bar -->
+        <div class="checkout-back-bar">
+          <button type="button" class="btn-back-to-cart" onclick="window.cartApp.goToCart()" id="backToCartBtn">
+            <span>&larr;</span>
+            <span>Back to Review Cart</span>
+          </button>
+          <span class="checkout-step-title">Step 2: Enter Delivery & Contact Details</span>
+        </div>
+
+        <div class="checkout-grid-layout">
+          <!-- Left Column: Customer Details Form -->
+          <div class="checkout-form-card">
+            <h2 class="checkout-card-heading">
+              <span class="heading-icon">📋</span>
+              <span>Order & Delivery Details</span>
+            </h2>
+
+            <!-- Order Type Selector -->
+            <div class="cart-page-form-group">
+              <label class="cart-page-label">Order Type / Fulfillment</label>
+              <div class="order-type-picker">
+                <label class="order-type-option">
+                  <input type="radio" name="orderTypeChoice" value="takeaway" checked onchange="window.cartApp.handleOrderTypeChange('takeaway')">
+                  <span class="order-type-box">
+                    <span class="order-type-icon">🥡</span>
+                    <span class="order-type-text">
+                      <strong>Takeaway / Parcel</strong>
+                      <small>Pick up packed from Marathahalli kitchen</small>
+                    </span>
+                  </span>
+                </label>
+                <label class="order-type-option">
+                  <input type="radio" name="orderTypeChoice" value="dinein" onchange="window.cartApp.handleOrderTypeChange('dinein')">
+                  <span class="order-type-box">
+                    <span class="order-type-icon">🍽️</span>
+                    <span class="order-type-text">
+                      <strong>Dine-in Pre-order</strong>
+                      <small>Food ready upon arrival at restaurant</small>
+                    </span>
+                  </span>
+                </label>
+                <label class="order-type-option">
+                  <input type="radio" name="orderTypeChoice" value="delivery" onchange="window.cartApp.handleOrderTypeChange('delivery')">
+                  <span class="order-type-box">
+                    <span class="order-type-icon">🛵</span>
+                    <span class="order-type-text">
+                      <strong>Local Delivery</strong>
+                      <small>Delivered around Marathahalli area</small>
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <!-- Hidden select for form bindings -->
+              <select id="cartPageOrderTypeSelect" style="display: none;">
+                <option value="takeaway" selected>takeaway</option>
+                <option value="dinein">dinein</option>
+                <option value="delivery">delivery</option>
+              </select>
+            </div>
+
+            <!-- Customer Name & Phone Row -->
+            <div class="checkout-inputs-row">
+              <div class="cart-page-form-group">
+                <label for="cartPageCustomerName" class="cart-page-label">Customer Name <span class="required-star">*</span></label>
+                <input type="text" id="cartPageCustomerName" class="cart-page-input" placeholder="e.g. Anand Sharma" required autocomplete="name">
+              </div>
+
+              <div class="cart-page-form-group">
+                <label for="cartPageCustomerPhone" class="cart-page-label">Phone Number <span class="required-star">*</span></label>
+                <input type="tel" id="cartPageCustomerPhone" class="cart-page-input" placeholder="e.g. 9876543210" required autocomplete="tel">
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 OPTION 1: DINE-IN PRE-ORDER SPECIFIC FORM CONTAINER
+                 (Visible when Dine-in Pre-order is selected)
+                 ======================================================== -->
+            <div id="dineinFieldsContainer" style="display: none;">
+              <div class="dinein-info-banner">
+                <div class="banner-head">
+                  <span>🍽️</span>
+                  <span>Dine-in Pre-order</span>
+                </div>
+                <p>Food ready upon arrival at restaurant. Operating hours: <strong>6:30 AM – 10:30 PM</strong>, all seven days. Table and dishes will be pre-arranged for your arrival.</p>
+              </div>
+
+              <div class="checkout-field-row">
+                <div class="cart-page-form-group">
+                  <label for="dineinArrivalDate" class="cart-page-label">Preferred Arrival Date <span class="required-star">*</span></label>
+                  <input type="date" id="dineinArrivalDate" class="cart-page-input" required>
+                  <span class="field-helper-hint">Today or any upcoming date</span>
+                </div>
+
+                <div class="cart-page-form-group">
+                  <label for="dineinArrivalTime" class="cart-page-label">Preferred Arrival Time <span class="required-star">*</span></label>
+                  <select id="dineinArrivalTime" class="cart-page-input" required>
+                    <option value="" disabled selected>Select arrival time (6:30 AM – 10:30 PM)</option>
+                    <option value="06:30 AM">06:30 AM (Breakfast opening)</option>
+                    <option value="07:00 AM">07:00 AM</option>
+                    <option value="07:30 AM">07:30 AM</option>
+                    <option value="08:00 AM">08:00 AM</option>
+                    <option value="08:30 AM">08:30 AM</option>
+                    <option value="09:00 AM">09:00 AM</option>
+                    <option value="09:30 AM">09:30 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM (Lunch)</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="01:30 PM">01:30 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="02:30 PM">02:30 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="03:30 PM">03:30 PM</option>
+                    <option value="04:00 PM">04:00 PM (Snacks & Chaat)</option>
+                    <option value="04:30 PM">04:30 PM</option>
+                    <option value="05:00 PM">05:00 PM</option>
+                    <option value="05:30 PM">05:30 PM</option>
+                    <option value="06:00 PM">06:00 PM</option>
+                    <option value="06:30 PM">06:30 PM</option>
+                    <option value="07:00 PM">07:00 PM (Dinner)</option>
+                    <option value="07:30 PM">07:30 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                    <option value="08:30 PM">08:30 PM</option>
+                    <option value="09:00 PM">09:00 PM</option>
+                    <option value="09:30 PM">09:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                    <option value="10:30 PM">10:30 PM (Kitchen closing)</option>
+                  </select>
+                  <span class="field-helper-hint">Strictly within operating hours (6:30 AM – 10:30 PM)</span>
+                </div>
+              </div>
+
+              <div class="cart-page-form-group">
+                <label for="dineinSpecialNotes" class="cart-page-label">Kitchen Notes (Optional)</label>
+                <input type="text" id="dineinSpecialNotes" class="cart-page-input" placeholder="e.g. Table for 3, keep filter coffee ready after tiffins">
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 OPTION 2: LOCAL DELIVERY SPECIFIC FORM CONTAINER
+                 (Visible when Local Delivery is selected)
+                 ======================================================== -->
+            <div id="deliveryFieldsContainer" style="display: none;">
+              <div class="delivery-info-banner">
+                <div class="banner-head">
+                  <span>🛵</span>
+                  <span>Local Delivery — Marathahalli Area</span>
+                </div>
+                <p>Delivered around Marathahalli area and immediate serviceable neighbourhoods (Opp. Kala Mandir, Spice Garden, Kundalahalli Gate, Munnekollal, Tulasi Theater Road). Delivery availability & packaging confirmed on WhatsApp.</p>
+              </div>
+
+              <div class="checkout-field-row">
+                <div class="cart-page-form-group">
+                  <label for="deliveryHouseNo" class="cart-page-label">House / Flat Number <span class="required-star">*</span></label>
+                  <input type="text" id="deliveryHouseNo" class="cart-page-input" placeholder="e.g. Flat 302 / Villa 12 / Door #4" required>
+                </div>
+
+                <div class="cart-page-form-group">
+                  <label for="deliveryBuildingName" class="cart-page-label">Building / Apartment Name <small>(Optional)</small></label>
+                  <input type="text" id="deliveryBuildingName" class="cart-page-input" placeholder="e.g. Sai Enclave, Prestige Summer">
+                </div>
+              </div>
+
+              <div class="checkout-field-row">
+                <div class="cart-page-form-group">
+                  <label for="deliveryStreetName" class="cart-page-label">Street / Road Name <span class="required-star">*</span></label>
+                  <input type="text" id="deliveryStreetName" class="cart-page-input" placeholder="e.g. 2nd Cross, Outer Ring Road Service Rd" required>
+                </div>
+
+                <div class="cart-page-form-group">
+                  <label for="deliveryAreaLocality" class="cart-page-label">Area / Locality <span class="required-star">*</span></label>
+                  <input type="text" id="deliveryAreaLocality" class="cart-page-input" placeholder="e.g. Marathahalli, Spice Garden" required>
+                  <span class="field-helper-hint">Marathahalli & immediate surroundings</span>
+                </div>
+              </div>
+
+              <div class="checkout-field-row">
+                <div class="cart-page-form-group">
+                  <label for="deliveryLandmark" class="cart-page-label">Landmark <span class="required-star">*</span></label>
+                  <input type="text" id="deliveryLandmark" class="cart-page-input" placeholder="e.g. Near Kala Mandir / Behind Brand Factory" required>
+                  <span class="field-helper-hint">Clear landmark for delivery partner</span>
+                </div>
+
+                <div class="cart-page-form-group">
+                  <label for="deliveryPinCode" class="cart-page-label">PIN Code <span class="required-star">*</span></label>
+                  <input type="text" id="deliveryPinCode" class="cart-page-input" placeholder="e.g. 560037" maxlength="6" pattern="[1-9][0-9]{5}" required>
+                  <span class="field-helper-hint">6-digit Indian PIN (e.g. 560037)</span>
+                </div>
+              </div>
+
+              <div class="cart-page-form-group">
+                <label for="deliveryInstructions" class="cart-page-label">Delivery Instructions <small>(Optional)</small></label>
+                <input type="text" id="deliveryInstructions" class="cart-page-input" placeholder="e.g. Leave parcel at security desk, call upon arrival at gate">
+              </div>
+
+              <div class="cart-page-form-group">
+                <label for="deliverySpecialNotes" class="cart-page-label">Kitchen Notes (Optional)</label>
+                <input type="text" id="deliverySpecialNotes" class="cart-page-input" placeholder="e.g. Extra coconut chutney, Less spice in sambar">
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 OPTION 3: TAKEAWAY / PARCEL FORM CONTAINER
+                 (Default visible option)
+                 ======================================================== -->
+            <div id="takeawayFieldsContainer">
+              <div class="takeaway-info-banner">
+                <div class="banner-head">
+                  <span>🥡</span>
+                  <span>Takeaway / Parcel Pickup</span>
+                </div>
+                <p>Pick up packed from Marathahalli kitchen (Opp. Kala Mandir). Freshly packed in food-grade packaging ready in ~15-20 minutes upon WhatsApp confirmation.</p>
+              </div>
+
+              <div class="cart-page-form-group">
+                <label for="takeawaySpecialNotes" class="cart-page-label">Kitchen Notes (Optional)</label>
+                <input type="text" id="takeawaySpecialNotes" class="cart-page-input" placeholder="e.g. Pack sambar separately, Keep coffee boiling hot">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Final Order Summary & WhatsApp Button -->
+          <aside class="checkout-summary-card">
+            <div class="checkout-summary-head">
+              <h3 class="checkout-summary-title">Final Order Review</h3>
+              <button type="button" class="checkout-edit-cart-link" onclick="window.cartApp.goToCart()">Edit Items</button>
+            </div>
+
+            <!-- Live Fulfillment Summary for Dine-in / Delivery / Takeaway -->
+            <div class="checkout-fulfillment-summary" id="checkoutFulfillmentSummary">
+              <div class="fulfillment-summary-tag" id="fulfillmentSummaryTag">
+                <span>🥡</span>
+                <span>Takeaway / Parcel</span>
+              </div>
+              <div class="fulfillment-summary-desc" id="fulfillmentSummaryDesc">
+                Pick up packed from Marathahalli kitchen (Opp. Kala Mandir).
+              </div>
+              <div class="fulfillment-summary-detail" id="fulfillmentSummaryDetail">
+                <span>⚡ Status:</span> <strong>Ready in ~15-20 mins upon confirmation</strong>
+              </div>
+            </div>
+
+            <!-- Compact itemized receipt -->
+            <div class="checkout-mini-items" id="checkoutMiniItemsList">
+              <!-- populated dynamically -->
+            </div>
+
+            <hr class="cart-summary-divider">
+
+            <div class="cart-summary-row">
+              <span>Dishes Subtotal</span>
+              <strong id="checkoutSubtotal">₹0</strong>
+            </div>
+
+            <div class="cart-summary-row" style="font-size: 0.8rem; color: var(--color-text-muted);">
+              <span>Packaging / Delivery</span>
+              <span id="checkoutPackagingNote">As applicable</span>
+            </div>
+
+            <div class="cart-summary-row total-row">
+              <span>Final Payable Amount</span>
+              <span class="cart-total-price" id="checkoutTotal">₹0</span>
+            </div>
+
+            <!-- WhatsApp Order Submit Button -->
+            <button type="button" class="btn-cart-whatsapp-order btn-submit-order-whatsapp" id="sendWhatsAppOrderBtn" aria-label="Send Order on WhatsApp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>Send Order on WhatsApp &rarr;</span>
+            </button>
+
+            <div style="text-align: center; margin-top: 12px;">
+              <button type="button" class="btn-secondary-link" onclick="window.cartApp.goToCart()">
+                &larr; Back to Cart (Edit items)
+              </button>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="cart-trust-badges">
+              <div class="cart-trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Direct to kitchen desk: <strong>8971583654</strong></span>
+              </div>
+              <div class="cart-trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Zero gateway fee. Pay via UPI QR or cash at counter/delivery.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer (Architectural, Grounded Dark Forest Green) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-title">Ashirvad Veg</div>
+          <div class="footer-brand-sub">Authentic South Indian Vegetarian Kitchen</div>
+          <p class="footer-about-copy">
+            Serving traditional Udupi breakfast tiffins, crisp ghee dosas, degree filter coffee, and wholesome vegetarian meals to the Marathahalli community every single day.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="menu.html" class="footer-link">Daily Menu (77 Dishes)</a>
+            <a href="about.html" class="footer-link">Our Craft & Heritage</a>
+            <a href="contact.html" class="footer-link">Location & Directions</a>
+            <a href="cart.html" class="footer-link">Order Cart</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Kitchen Sections</h4>
+          <div class="footer-links-list">
+            <a href="menu.html?category=dosa" class="footer-link">Ghee Roast Dosas</a>
+            <a href="menu.html?category=tiffins" class="footer-link">Breakfast Idlis & Vada</a>
+            <a href="menu.html?category=meals-rice" class="footer-link">South Indian Meals</a>
+            <a href="menu.html?category=hot-beverages" class="footer-link">Degree Filter Coffee</a>
+            <a href="menu.html?category=chats" class="footer-link">Evening Chaats & Bajji</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Visit Our Restaurant</h4>
+          <div class="footer-contact-item">
+            <strong>Address</strong>
+            No. 3/76, Ground Floor, Outer Ring Road, Opp. Kala Mandir, Marathahalli, Bangalore – 560037
+          </div>
+          <div class="footer-contact-item">
+            <strong>Operating Hours</strong>
+            6:30 AM – 10:30 PM (All 7 Days)
+          </div>
+          <div class="footer-contact-item">
+            <strong>Telephone Inquiries</strong>
+            <a href="tel:8971583654" style="color: #D5B779;">8971583654</a> / <a href="tel:9973240035" style="color: #D5B779;">9973240035</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-base-row">
+        <div>&copy; 2026 Ashirvad Veg. 100% Pure Vegetarian Restaurant. All rights reserved.</div>
+        <div>No. 3/76, Outer Ring Road, Opp. Kala Mandir, Marathahalli, Bengaluru – 560037</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/image-data.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

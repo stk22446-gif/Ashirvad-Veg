@@ -43,13 +43,13 @@
       <a href="index.html" class="brand-identity" aria-label="Ashirvad Veg Home">
         <!-- Bespoke Brass & Forest Crest Emblem -->
         <svg class="brand-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="48" fill="#143826" stroke="#BD5324" stroke-width="2.5"/>
-          <circle cx="50" cy="50" r="42" stroke="rgba(248, 211, 141, 0.4)" stroke-width="1" stroke-dasharray="2 2"/>
-          <path d="M50 20C46 28 41 33 41 40C41 45.5 45 49 50 49C55 49 59 45.5 59 40C59 33 54 28 50 20Z" fill="#F8D38D"/>
-          <path d="M50 24C48 29 45 32 45 37C45 40 47.5 42 50 42C52.5 42 55 40 55 37C55 32 52 29 50 24Z" fill="#BD5324"/>
-          <path d="M30 68C36 76 64 76 70 68C66 62 34 62 30 68Z" fill="#F8D38D"/>
-          <path d="M33 58C38 64 62 64 67 58C63 53 37 53 33 58Z" fill="#FAF0EB"/>
-          <circle cx="50" cy="74" r="3" fill="#BD5324"/>
+          <circle cx="50" cy="50" r="48" fill="#153D32" stroke="#B95B35" stroke-width="2.5"/>
+          <circle cx="50" cy="50" r="42" stroke="rgba(213, 183, 121, 0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+          <path d="M50 20C46 28 41 33 41 40C41 45.5 45 49 50 49C55 49 59 45.5 59 40C59 33 54 28 50 20Z" fill="#D5B779"/>
+          <path d="M50 24C48 29 45 32 45 37C45 40 47.5 42 50 42C52.5 42 55 40 55 37C55 32 52 29 50 24Z" fill="#B95B35"/>
+          <path d="M30 68C36 76 64 76 70 68C66 62 34 62 30 68Z" fill="#D5B779"/>
+          <path d="M33 58C38 64 62 64 67 58C63 53 37 53 33 58Z" fill="#F7F3E9"/>
+          <circle cx="50" cy="74" r="3" fill="#B95B35"/>
         </svg>
 
         <div class="brand-meta">
@@ -63,21 +63,23 @@
         <a href="index.html" class="nav-anchor">Home</a>
         <a href="menu.html" class="nav-anchor">Daily Menu</a>
         <a href="about.html" class="nav-anchor active">Our Craft</a>
-        <a href="contact.html" class="nav-anchor">Location & Hours</a>
+        <a href="contact.html" class="nav-anchor">Location &amp; Hours</a>
       </nav>
 
       <!-- Header Action Controls -->
       <div class="header-actions">
-        <button type="button" class="btn-header-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()" aria-label="Order on WhatsApp">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-          <span>WhatsApp Order</span>
-        </button>
+        <!-- Single Cart Entry Point -->
+        <a href="cart.html" class="btn-header-cart" id="headerCartBtn" aria-label="View Shopping Cart">
+          <svg class="cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="headerCartBadge">0</span>
+        </a>
 
-        <button type="button" class="btn-cart-trigger cart-drawer-trigger" aria-label="View Order Bag">
-          <span>Order Bag</span>
-          <span class="cart-counter-pill cart-badge" style="display: none;">0</span>
-        </button>
-
+        <!-- Mobile Menu Toggle Button -->
         <button type="button" class="mobile-nav-toggle" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileNavDrawer">
           <span class="nav-toggle-icon">
             <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -93,7 +95,7 @@
     <div class="cart-drawer-head">
       <div>
         <div class="brand-title-text" style="color: #FFFFFF; font-size: 1.35rem;">Ashirvad Veg</div>
-        <div style="font-size: 0.68rem; color: #F8D38D; text-transform: uppercase; letter-spacing: 0.06em;">Marathahalli, Bengaluru</div>
+        <div style="font-size: 0.68rem; color: #D5B779; text-transform: uppercase; letter-spacing: 0.06em;">Marathahalli, Bengaluru</div>
       </div>
       <button type="button" class="cart-close-trigger" id="closeNavDrawer" aria-label="Close navigation">✕</button>
     </div>
@@ -102,10 +104,12 @@
       <a href="menu.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Daily Kitchen Menu</a>
       <a href="about.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 700; color: var(--color-brand-primary);">Our Craft & Heritage</a>
       <a href="contact.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">Location & Opening Hours</a>
+      <a href="cart.html" class="mobile-nav-link" style="font-size: 1rem; font-weight: 600;">
+        Cart <span class="cart-badge" style="background: var(--color-brand-brass); color: var(--color-brand-primary-dark); font-size: 0.72rem; border-radius: 10px; padding: 1px 7px; margin-left: 6px;">0</span>
+      </a>
 
       <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border-hairline); display: flex; flex-direction: column; gap: 12px;">
         <a href="tel:8971583654" class="btn-secondary-outline" style="text-align: center;">Call: 8971583654</a>
-        <button type="button" class="btn-accent-whatsapp" onclick="window.whatsAppOrder.handleOrderSubmit()" style="text-align: center;">Order on WhatsApp</button>
       </div>
     </div>
   </aside>
@@ -202,101 +206,23 @@
         </div>
 
         <div style="border-radius: var(--radius-xs); overflow: hidden; border: 1px solid var(--color-border-hairline);">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Clean and comfortable vegetarian restaurant dining hall at Ashirvad Veg">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Clean and comfortable vegetarian restaurant dining hall at Ashirvad Veg" loading="lazy">
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Slide-out Cart Drawer -->
-  <aside class="cart-drawer-panel" id="cartDrawer" role="dialog" aria-labelledby="cartDrawerTitle" aria-modal="true">
-    <div class="cart-drawer-head">
-      <div>
-        <h3 class="cart-head-title" id="cartDrawerTitle">Your Order Bag</h3>
-        <span class="cart-head-sub" id="cartTotalItemsCount">0 items</span>
-      </div>
-      <button type="button" class="cart-close-trigger" id="closeCartDrawer" aria-label="Close Order Drawer">✕</button>
-    </div>
-
-    <!-- Empty State -->
-    <div class="cart-empty-panel" id="cartEmptyState">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-      <h4 class="cart-empty-title">Your order bag is empty</h4>
-      <p class="cart-empty-msg">Browse through our menu dishes and select '+ Add' to build your WhatsApp order.</p>
-    </div>
-
-    <!-- Items List -->
-    <div class="cart-drawer-items" id="cartDrawerItems"></div>
-
-    <!-- Drawer Footer -->
-    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
-      <!-- Order Type Selector -->
-      <div class="cart-input-group">
-        <label for="orderTypeSelect" class="cart-input-label">Order Type</label>
-        <select id="orderTypeSelect" class="cart-select">
-          <option value="takeaway">Takeaway Parcel (Self Pickup)</option>
-          <option value="dinein">Dine-In Pre-order</option>
-          <option value="delivery">Home / Office Delivery</option>
-        </select>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;" class="cart-input-group">
-        <div>
-          <label for="customerNameInput" class="cart-input-label">Your Name</label>
-          <input type="text" id="customerNameInput" class="cart-input" placeholder="e.g. Ramesh">
-        </div>
-        <div>
-          <label for="customerPhoneInput" class="cart-input-label">Phone Number</label>
-          <input type="tel" id="customerPhoneInput" class="cart-input" placeholder="e.g. 9876543210">
-        </div>
-      </div>
-
-      <div class="cart-input-group" id="deliveryAddressGroup" style="display: none;">
-        <label for="deliveryAddressInput" class="cart-input-label">Delivery Address in Marathahalli Area</label>
-        <textarea id="deliveryAddressInput" class="cart-input" rows="2" placeholder="Building, Flat, Street, Landmark..."></textarea>
-      </div>
-
-      <div class="cart-input-group">
-        <label for="specialNotesInput" class="cart-input-label">Kitchen Notes (Optional)</label>
-        <input type="text" id="specialNotesInput" class="cart-input" placeholder="e.g. Extra spicy sambar, Less sugar in coffee">
-      </div>
-
-      <div class="cart-summary-line">
-        <span>Item Subtotal</span>
-        <span id="cartSubtotalPrice">₹0</span>
-      </div>
-      <div class="cart-summary-line" style="font-size: 0.78rem; color: var(--color-text-muted);">
-        <span>Packaging / Delivery</span>
-        <span>As applicable</span>
-      </div>
-      <div class="cart-summary-line total">
-        <span>Estimated Total</span>
-        <span id="cartDrawerTotalPrice" style="color: var(--color-brand-accent);">₹0</span>
-      </div>
-
-      <button type="button" class="btn-accent-whatsapp" id="sendWhatsAppOrderBtn" style="width: 100%; margin-top: 14px; padding: 14px; font-size: 0.95rem;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        <span>Send Order on WhatsApp &rarr;</span>
-      </button>
-
-      <div style="text-align: center; margin-top: 10px;">
-        <button type="button" id="clearCartBtn" style="font-size: 0.75rem; color: var(--color-text-muted); text-decoration: underline;">Clear order bag</button>
-      </div>
-    </div>
-  </aside>
-  <div class="cart-drawer-overlay" id="cartOverlay"></div>
-
   <!-- Mobile Sticky Bottom Cart -->
-  <div class="mobile-sticky-order-bar cart-drawer-trigger" id="mobileCartPill">
+  <a href="cart.html" class="mobile-sticky-order-bar" id="mobileCartPill" aria-label="View Shopping Cart">
     <div class="mobile-cart-left">
       <span class="mobile-cart-sum">₹0</span>
       <span class="mobile-cart-items-count">0 items</span>
     </div>
     <div class="mobile-cart-action">
-      <span>View Order Bag &rarr;</span>
+      <span>View Cart &rarr;</span>
     </div>
-  </div>
+  </a>
 
   <!-- Site Footer -->
   <footer class="site-footer">
@@ -317,6 +243,7 @@
             <a href="menu.html" class="footer-link">Daily Menu</a>
             <a href="about.html" class="footer-link">Kitchen Craft & Story</a>
             <a href="contact.html" class="footer-link">Directions & Location</a>
+            <a href="cart.html" class="footer-link">Order Cart</a>
           </div>
         </div>
 
@@ -343,7 +270,7 @@
           </div>
           <div class="footer-contact-item">
             <strong>Direct Telephones</strong>
-            <a href="tel:8971583654" style="color: #F8D38D;">8971583654</a> / <a href="tel:9973240035" style="color: #F8D38D;">9973240035</a>
+            <a href="tel:8971583654" style="color: #D5B779;">8971583654</a> / <a href="tel:9973240035" style="color: #D5B779;">9973240035</a>
           </div>
         </div>
       </div>

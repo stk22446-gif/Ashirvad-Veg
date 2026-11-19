@@ -159,6 +159,23 @@ function initOrderTypeToggle() {
     orderTypeSelect.addEventListener("change", checkVisibility);
     checkVisibility();
   }
+
+  // Cart page order type toggle
+  const cartPageOrderTypeSelect = document.getElementById("cartPageOrderTypeSelect");
+  const cartPageDeliveryAddressGroup = document.getElementById("cartPageDeliveryAddressGroup");
+
+  if (cartPageOrderTypeSelect && cartPageDeliveryAddressGroup) {
+    const checkPageVisibility = () => {
+      if (cartPageOrderTypeSelect.value === "delivery") {
+        cartPageDeliveryAddressGroup.style.display = "block";
+      } else {
+        cartPageDeliveryAddressGroup.style.display = "none";
+      }
+    };
+
+    cartPageOrderTypeSelect.addEventListener("change", checkPageVisibility);
+    checkPageVisibility();
+  }
 }
 
 /**
