@@ -13,9 +13,18 @@
   <meta property="og:description" content="Complete your order details and dispatch directly to the kitchen on WhatsApp. Pure vegetarian South Indian delicacies.">
   <meta property="og:url" content="https://ashirvadveg.com/checkout.html">
 
+  <!-- Critical Display Protection -->
+  <style>
+    @media (min-width: 992px) {
+      .mobile-nav-drawer, #mobileNavDrawer, .mobile-nav-scrim, #navBackdrop, .mobile-nav-toggle {
+        display: none !important;
+      }
+    }
+  </style>
+
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css?v=2.2.0">
+  <link rel="stylesheet" href="css/responsive.css?v=2.2.0">
   <script>
     // Seamless routing: ensure URL hash indicates checkout step
     if (!window.location.hash) {
@@ -614,10 +623,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/image-data.js"></script>
-  <script src="js/menu-data.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/whatsapp.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/image-data.js?v=2.2.0"></script>
+  <script src="js/menu-data.js?v=2.2.0"></script>
+  <script src="js/cart.js?v=2.2.0"></script>
+  <script src="js/whatsapp.js?v=2.2.0"></script>
+  <script src="js/app.js?v=2.2.0"></script>
 </body>
 </html>

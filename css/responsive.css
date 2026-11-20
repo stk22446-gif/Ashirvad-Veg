@@ -54,6 +54,21 @@
 }
 
 /* --------------------------------------------------------------------------
+   Desktop Specific (min-width: 992px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .mobile-nav-drawer,
+  #mobileNavDrawer,
+  .mobile-nav-scrim,
+  #navBackdrop,
+  .mobile-nav-toggle {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
    3. Medium Tablets & Small Laptops (max-width: 991px)
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
