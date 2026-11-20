@@ -227,6 +227,29 @@
   margin-bottom: 4px;
 }
 
+.veg-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--color-veg-indicator, #0F823B);
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+  vertical-align: middle;
+  position: relative;
+}
+
+.veg-indicator::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-veg-indicator, #0F823B);
+}
+
 .menu-item-name {
   font-size: 0.98rem;
   font-weight: 700;
@@ -238,15 +261,15 @@
   font-size: 0.62rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   padding: 2px 6px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .menu-item-tag.popular {
   background-color: var(--color-brand-accent-soft);
   color: var(--color-brand-accent);
-  border: 1px solid rgba(189, 83, 36, 0.25);
+  border: 1px solid rgba(185, 91, 53, 0.28);
 }
 
 .menu-item-description {
