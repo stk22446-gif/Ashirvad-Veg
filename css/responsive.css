@@ -155,20 +155,12 @@
     gap: 16px 20px;
   }
 
-  /* Gallery Collage */
-  .gallery-asymmetric-spread {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+  /* Kitchen Carousel: Tablet sizing */
+  .kitchen-slide-frame {
+    height: 400px;
   }
-
-  .gallery-item-7,
-  .gallery-item-5 {
-    grid-column: span 1;
-  }
-
-  .gallery-item-7 .gallery-item-frame,
-  .gallery-item-5 .gallery-item-frame {
-    height: 280px;
+  .kitchen-carousel-slide {
+    flex: 0 0 86%;
   }
 
   /* Location Practical Section */
@@ -371,7 +363,7 @@
     padding: 12px 14px;
     background-color: #FFFFFF;
     border: 1px solid var(--color-border-hairline);
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-card-sm);
     min-height: 98px;
     box-sizing: border-box;
     transition: border-color var(--transition-clean), box-shadow var(--transition-clean);
@@ -381,7 +373,7 @@
   .menu-row-thumb {
     width: 80px;
     height: 80px;
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-img);
     overflow: hidden;
     flex-shrink: 0;
     align-self: center;
@@ -395,6 +387,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: var(--radius-img);
   }
 
   .menu-item-info,
@@ -507,7 +500,7 @@
     color: var(--color-brand-primary);
     background-color: var(--color-brand-primary-soft);
     border: 1px solid rgba(21, 61, 50, 0.22);
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-btn);
     width: 72px;
     height: 35px;
     min-height: 35px;
@@ -573,19 +566,39 @@
     margin-top: 4px;
   }
 
-  /* Gallery Collage */
+  /* Kitchen Carousel: Mobile Prominent Layout */
   .section-editorial-gallery {
-    padding: 50px 0;
+    padding: 48px 0;
   }
 
-  .gallery-asymmetric-spread {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .kitchen-carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+    opacity: 1;
+    transform: none;
   }
 
-  .gallery-item-7 .gallery-item-frame,
-  .gallery-item-5 .gallery-item-frame {
-    height: 240px;
+  .kitchen-slide-frame {
+    height: 310px;
+  }
+
+  .kitchen-slide-overlay {
+    padding: 20px 20px 18px;
+  }
+
+  .kitchen-slide-title {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .kitchen-slide-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* Location Section */
@@ -726,6 +739,74 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
+  /* Product Quick View Modal — Mobile Bottom Sheet */
+  .product-modal-scrim {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .product-modal-card {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    border-radius: 18px 18px 0 0;
+    max-height: 86vh;
+    padding: 18px 18px 24px;
+    gap: 14px;
+    transform: translateY(100%);
+  }
+
+  .product-modal-scrim.active .product-modal-card {
+    transform: translateY(0);
+  }
+
+  .product-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .product-modal-media {
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .product-modal-details {
+    padding-right: 0;
+  }
+
+  .product-modal-title {
+    font-size: 1.35rem;
+  }
+
+  .product-modal-price {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .product-modal-desc {
+    font-size: 0.86rem;
+    margin-bottom: 16px;
+  }
+
+  .product-modal-footer {
+    padding-top: 12px;
+    gap: 10px;
+  }
+
+  .product-modal-qty-picker {
+    height: 44px;
+  }
+
+  .modal-qty-btn {
+    width: 40px;
+  }
+
+  .btn-modal-add {
+    height: 44px;
+    font-size: 0.92rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -807,9 +888,17 @@
     font-size: 0.74rem;
   }
 
-  .gallery-item-7 .gallery-item-frame,
-  .gallery-item-5 .gallery-item-frame {
-    height: 210px;
+  .kitchen-slide-frame {
+    height: 260px;
+  }
+
+  .kitchen-slide-title {
+    font-size: 1.1rem;
+  }
+
+  .kitchen-slide-tag {
+    font-size: 0.65rem;
+    padding: 2px 7px;
   }
 
   .location-map-frame {

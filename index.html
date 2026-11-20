@@ -386,7 +386,7 @@
 
         <div class="popular-arrangement-grid">
           <!-- Left Hero Feature: Crispy Ghee Masala Dosa -->
-          <article class="popular-hero-feature">
+          <article class="popular-hero-feature" data-item-id="masala-dosa" tabindex="0" role="button" aria-label="View details for Crispy Ghee Masala Dosa">
             <div class="popular-hero-media">
               <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=85"
                 alt="Crispy Ghee Masala Dosa roasted on cast-iron plate" loading="lazy">
@@ -400,7 +400,7 @@
                 seasoned potato mash, accompanied by hot Karnataka drumstick sambar and fresh coconut chutney.</p>
               <div class="popular-hero-action">
                 <span class="popular-dish-serve">Served with Sambar &amp; 2 Fresh Chutneys</span>
-                <button type="button" class="btn-inline-add" onclick="window.cartApp.addItem('masala-dosa', 1)">+ Add to
+                <button type="button" class="btn-inline-add" onclick="event.stopPropagation(); window.cartApp.addItem('masala-dosa', 1)">+ Add to
                   Cart</button>
               </div>
             </div>
@@ -409,7 +409,7 @@
           <!-- Right Stacked Arrangement -->
           <div class="popular-stacked-list">
             <!-- Item 1: Idli Vada Combo -->
-            <article class="popular-stacked-row">
+            <article class="popular-stacked-row" data-item-id="idli-vada-combo" tabindex="0" role="button" aria-label="View details for Idli Vada Combo">
               <div class="stacked-row-thumb">
                 <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=300&q=85"
                   alt="Steamed Idli and Crispy Medu Vada Combo" loading="lazy">
@@ -421,13 +421,13 @@
               </div>
               <div class="stacked-row-action">
                 <span class="stacked-row-price">₹65</span>
-                <button type="button" class="btn-inline-add" onclick="window.cartApp.addItem('idli-vada-combo', 1)">+
+                <button type="button" class="btn-inline-add" onclick="event.stopPropagation(); window.cartApp.addItem('idli-vada-combo', 1)">+
                   Add</button>
               </div>
             </article>
 
             <!-- Item 2: South Indian Meals -->
-            <article class="popular-stacked-row">
+            <article class="popular-stacked-row" data-item-id="south-indian-meals" tabindex="0" role="button" aria-label="View details for South Indian Meals">
               <div class="stacked-row-thumb">
                 <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=300&q=85"
                   alt="South Indian Afternoon Meals Thali" loading="lazy">
@@ -439,13 +439,13 @@
               </div>
               <div class="stacked-row-action">
                 <span class="stacked-row-price">₹110</span>
-                <button type="button" class="btn-inline-add" onclick="window.cartApp.addItem('south-indian-meals', 1)">+
+                <button type="button" class="btn-inline-add" onclick="event.stopPropagation(); window.cartApp.addItem('south-indian-meals', 1)">+
                   Add</button>
               </div>
             </article>
 
             <!-- Item 3: Special Filter Coffee -->
-            <article class="popular-stacked-row">
+            <article class="popular-stacked-row" data-item-id="filter-coffee" tabindex="0" role="button" aria-label="View details for Special Filter Coffee">
               <div class="stacked-row-thumb">
                 <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=85"
                   alt="Traditional Brass Davara Filter Coffee" loading="lazy">
@@ -457,7 +457,7 @@
               </div>
               <div class="stacked-row-action">
                 <span class="stacked-row-price">₹25</span>
-                <button type="button" class="btn-inline-add" onclick="window.cartApp.addItem('filter-coffee', 1)">+
+                <button type="button" class="btn-inline-add" onclick="event.stopPropagation(); window.cartApp.addItem('filter-coffee', 1)">+
                   Add</button>
               </div>
             </article>
@@ -467,52 +467,115 @@
     </section>
 
     <!-- ========================================================
-         6. RESTAURANT GALLERY (Asymmetric Photographic Spread)
+         6. RESTAURANT GALLERY (Automatic Kitchen Preparation Carousel)
          ======================================================== -->
-    <section class="section-editorial-gallery" id="gallery-section">
+    <section class="section-editorial-gallery" id="gallery-section" aria-label="Kitchen Preparation Gallery">
       <div class="container">
-        <div>
-          <span class="hero-origin-kicker">Kitchen Craft &amp; Atmosphere</span>
-          <h2 class="section-headline">A glimpse inside our kitchen preparation</h2>
-          <p class="section-subheadline">Authentic food photography of our morning preparation, live tawa counter, and
-            fresh accompaniments in Marathahalli.</p>
+        <div class="gallery-header-row">
+          <div>
+            <span class="hero-origin-kicker">Kitchen Craft &amp; Atmosphere</span>
+            <h2 class="section-headline">A glimpse inside our kitchen preparation</h2>
+            <p class="section-subheadline">Authentic food photography of our morning preparation, live tawa counter, and fresh accompaniments in Marathahalli.</p>
+          </div>
         </div>
 
-        <div class="gallery-asymmetric-spread">
-          <!-- 1. Live Cast-Iron Dosa Station (Span 7) -->
-          <div class="gallery-item-7">
-            <div class="gallery-item-frame">
-              <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1200&q=85"
-                alt="Live Cast-Iron Dosa Station roasting golden dosas in pure dairy ghee" loading="lazy">
-            </div>
-            <div class="gallery-caption-strip">Live Cast-Iron Dosa Station &bull; Roasted in Pure Dairy Ghee</div>
-          </div>
+        <!-- Carousel Root Container -->
+        <div class="kitchen-carousel-wrapper" id="kitchenCarousel" role="region" aria-roledescription="carousel" aria-label="Kitchen Preparation Carousel" tabindex="0">
+          <!-- Viewport -->
+          <div class="kitchen-carousel-viewport">
+            <div class="kitchen-carousel-track" id="kitchenCarouselTrack">
+              
+              <!-- Slide 1: Live Cast-Iron Dosa Station -->
+              <div class="kitchen-carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80"
+                    alt="Live Cast-Iron Dosa Station roasting golden dosas in pure dairy ghee" loading="eager" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Live Tawa Counter</span>
+                    <h3 class="kitchen-slide-title">Cast-Iron Ghee Masala Dosa Roasting</h3>
+                    <p class="kitchen-slide-desc">Hand-spread on seasoned iron plates, roasted crisp in pure dairy ghee and filled with fragrant spiced potato mash.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- 2. Brass Filter Coffee (Span 5) -->
-          <div class="gallery-item-5">
-            <div class="gallery-item-frame">
-              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=85"
-                alt="Degree Filter Coffee poured with frothy crema in brass davara" loading="lazy">
-            </div>
-            <div class="gallery-caption-strip">Degree Filter Coffee &bull; Peaberry Chicory Decoction</div>
-          </div>
+              <!-- Slide 2: Morning Breakfast Spread -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=80"
+                    alt="Steamed fluffy thatte idlis and crispy medu vada on fresh plantain leaf" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Morning Tiffin Shift</span>
+                    <h3 class="kitchen-slide-title">Stone-Ground Thatte Idlis &amp; Crispy Vada</h3>
+                    <p class="kitchen-slide-desc">Naturally fermented overnight batter steamed fresh at 4:30 AM, served on banana leaves with three house chutneys.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- 3. Morning Breakfast Spread (Span 5) -->
-          <div class="gallery-item-5">
-            <div class="gallery-item-frame">
-              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=85"
-                alt="Fluffy steamed thatte idlis and crispy medu vada on plantain leaf" loading="lazy">
-            </div>
-            <div class="gallery-caption-strip">Breakfast on Plantain Leaf &bull; Steamed Idlis &amp; Medu Vada</div>
-          </div>
+              <!-- Slide 3: Karnataka Drumstick Sambar -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
+                    alt="Aromatic Karnataka drumstick sambar and fresh dal simmered in brass vessels" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Slow-Simmered Kitchen</span>
+                    <h3 class="kitchen-slide-title">Brass Vessel Drumstick &amp; Shallot Sambar</h3>
+                    <p class="kitchen-slide-desc">Simmered in heavy brass vessels with stone-ground coriander, cumin, fenugreek, and fresh country drumsticks.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- 4. Evening Mirchi Bajji (Span 7) -->
-          <div class="gallery-item-7">
-            <div class="gallery-item-frame">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=85"
-                alt="Crispy batter-fried Mirchi Bajji fresh from kadai" loading="lazy">
-            </div>
-            <div class="gallery-caption-strip">Evening Tea-Time Special &bull; Crisp Mirchi Bajji with Coconut Chutney
+              <!-- Slide 4: Degree Filter Coffee -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80"
+                    alt="Pouring frothy degree filter coffee in brass davara tumbler" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Traditional Beverage</span>
+                    <h3 class="kitchen-slide-title">Degree Filter Coffee &amp; Frothy Crema</h3>
+                    <p class="kitchen-slide-desc">Traditional 80:20 plantation peaberry decoction dripped through brass filters and aerated with whole dairy milk.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5: Afternoon Meals Thali -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=900&q=80"
+                    alt="Traditional South Indian meals thali preparation with rice, palya and curries" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Afternoon Service</span>
+                    <h3 class="kitchen-slide-title">South Indian Full Meals Thali Preparation</h3>
+                    <p class="kitchen-slide-desc">Sona masuri rice with hot country drumstick sambar, pepper rasam, seasonal vegetable palya, and crisp papad.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6: Evening Mirchi Bajji Kadai -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
+                    alt="Crispy batter-fried Mirchi Bajji fresh from kadai" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Evening Live Kadai</span>
+                    <h3 class="kitchen-slide-title">Live Mirchi Bajji &amp; Tea-Time Snacks</h3>
+                    <p class="kitchen-slide-desc">Plump green chillies dipped in seasoned gram-flour batter and fried golden crisp to order with fresh coconut chutney.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7: Takeaway & Parcel Counter -->
+              <div class="kitchen-carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
+                <div class="kitchen-slide-frame">
+                  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80"
+                    alt="Hygienic stainless steel takeaway packing counter with quick order fulfillment" loading="lazy" class="kitchen-slide-img">
+                  <div class="kitchen-slide-overlay">
+                    <span class="kitchen-slide-tag">Dispatch &amp; Cleanliness</span>
+                    <h3 class="kitchen-slide-title">Hygienic Takeaway Packaging &amp; Dispatch</h3>
+                    <p class="kitchen-slide-desc">Food-grade silver foil and leaf-lined container packaging ensuring food stays hot, fresh, and spill-proof to your doorstep.</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
